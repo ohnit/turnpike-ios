@@ -10,23 +10,32 @@
 
 @implementation TurnpikeTests
 
-- (void)setUp
-{
-    [super setUp];
-    
-    // Set-up code here.
+- (void)testBasicRoute {
+    STFail(@"not implemented");
 }
 
-- (void)tearDown
-{
-    // Tear-down code here.
-    
-    [super tearDown];
+- (void)testEmptyRoute{
+    STFail(@"not implemented");
 }
 
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in TurnpikeTests");
+- (void)testDefaultRoute{
+    STFail(@"not implemented");
+}
+
+- (void)testSeparateRouters{
+    STFail(@"not implemented");
+}
+
+- (void)testBasicFilter{
+    STFail(@"not implemented");
+}
+
+- (void)testAnonymousFilters{
+    STFail(@"not implemented");
+}
+
+- (void)testFilterChainOrder{
+    STFail(@"not implemented");
 }
 
 @end
