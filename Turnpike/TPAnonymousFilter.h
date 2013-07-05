@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "TPFilterProtocol.h"
 
+@class TPFilterChain;
+
 /**
  An alias for `(^TPFilterBlock)(TPRouteRequest *request, TPFilterChain *filterChain)`. Used as the block for processing filters.
  */

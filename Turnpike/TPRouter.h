@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TPRouteRequest.h"
+#import "TPAnonymousFilter.h"
 
 /**
-TPFilalias for `(^TPRoutingCallback)(TPRouteRequest *request)`. Used as the callback block to map to routes.
+Alias for `(^TPRoutingCallback)(TPRouteRequest *request)`. Used as the callback block to map to routes.
  */
 typedef void (^TPRoutingCallback)(TPRouteRequest *request);
 

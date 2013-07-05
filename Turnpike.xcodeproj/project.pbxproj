@@ -20,6 +20,7 @@
 		ACFED1B41787338F00AD1920 /* TPRouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFED1B31787338F00AD1920 /* TPRouteRequest.m */; };
 		ACFED1B81787349B00AD1920 /* TPAnonymousFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFED1B71787349B00AD1920 /* TPAnonymousFilter.m */; };
 		ACFED1BB178734D600AD1920 /* TPFilterChain.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFED1BA178734D600AD1920 /* TPFilterChain.m */; };
+		ACFED1BE178740BE00AD1920 /* TPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFED1BD178740BE00AD1920 /* TPHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		ACFED1B71787349B00AD1920 /* TPAnonymousFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAnonymousFilter.m; sourceTree = "<group>"; };
 		ACFED1B9178734D600AD1920 /* TPFilterChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPFilterChain.h; sourceTree = "<group>"; };
 		ACFED1BA178734D600AD1920 /* TPFilterChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPFilterChain.m; sourceTree = "<group>"; };
+		ACFED1BC178740BE00AD1920 /* TPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPHelper.h; sourceTree = "<group>"; };
+		ACFED1BD178740BE00AD1920 /* TPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 		ACFED1AE1787329400AD1920 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				ACFED1BC178740BE00AD1920 /* TPHelper.h */,
+				ACFED1BD178740BE00AD1920 /* TPHelper.m */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				ACFED1B41787338F00AD1920 /* TPRouteRequest.m in Sources */,
 				ACFED1B81787349B00AD1920 /* TPAnonymousFilter.m in Sources */,
 				ACFED1BB178734D600AD1920 /* TPFilterChain.m in Sources */,
+				ACFED1BE178740BE00AD1920 /* TPHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

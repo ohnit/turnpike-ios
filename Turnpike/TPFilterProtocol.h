@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 URX. All rights reserved.
 //
 
+@class TPRouteRequest;
+@class TPFilterChain;
+
 /**
  ## Overview
  
