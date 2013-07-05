@@ -16,6 +16,10 @@
 		ACFED19A1787304800AD1920 /* libTurnpike.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFED1811787304800AD1920 /* libTurnpike.a */; };
 		ACFED1A01787304800AD1920 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACFED19E1787304800AD1920 /* InfoPlist.strings */; };
 		ACFED1A31787304800AD1920 /* TurnpikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFED1A21787304800AD1920 /* TurnpikeTests.m */; };
+		ACFED1B1178732C100AD1920 /* TPRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFED1B0178732C100AD1920 /* TPRouter.m */; };
+		ACFED1B41787338F00AD1920 /* TPRouteRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFED1B31787338F00AD1920 /* TPRouteRequest.m */; };
+		ACFED1B81787349B00AD1920 /* TPAnonymousFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFED1B71787349B00AD1920 /* TPAnonymousFilter.m */; };
+		ACFED1BB178734D600AD1920 /* TPFilterChain.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFED1BA178734D600AD1920 /* TPFilterChain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,15 @@
 		ACFED19F1787304800AD1920 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ACFED1A11787304800AD1920 /* TurnpikeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TurnpikeTests.h; sourceTree = "<group>"; };
 		ACFED1A21787304800AD1920 /* TurnpikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TurnpikeTests.m; sourceTree = "<group>"; };
+		ACFED1AF178732C100AD1920 /* TPRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRouter.h; sourceTree = "<group>"; };
+		ACFED1B0178732C100AD1920 /* TPRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPRouter.m; sourceTree = "<group>"; };
+		ACFED1B21787338F00AD1920 /* TPRouteRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRouteRequest.h; sourceTree = "<group>"; };
+		ACFED1B31787338F00AD1920 /* TPRouteRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPRouteRequest.m; sourceTree = "<group>"; };
+		ACFED1B51787340B00AD1920 /* TPFilterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPFilterProtocol.h; sourceTree = "<group>"; };
+		ACFED1B61787349B00AD1920 /* TPAnonymousFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPAnonymousFilter.h; sourceTree = "<group>"; };
+		ACFED1B71787349B00AD1920 /* TPAnonymousFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPAnonymousFilter.m; sourceTree = "<group>"; };
+		ACFED1B9178734D600AD1920 /* TPFilterChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPFilterChain.h; sourceTree = "<group>"; };
+		ACFED1BA178734D600AD1920 /* TPFilterChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPFilterChain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +126,9 @@
 			children = (
 				ACFED1891787304800AD1920 /* Turnpike.h */,
 				ACFED18B1787304800AD1920 /* Turnpike.m */,
+				ACFED1AC1787328700AD1920 /* Routing */,
+				ACFED1AD1787328C00AD1920 /* Filters */,
+				ACFED1AE1787329400AD1920 /* Helper */,
 				ACFED1871787304800AD1920 /* Supporting Files */,
 			);
 			path = Turnpike;
@@ -143,6 +159,36 @@
 				ACFED19E1787304800AD1920 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACFED1AC1787328700AD1920 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				ACFED1AF178732C100AD1920 /* TPRouter.h */,
+				ACFED1B0178732C100AD1920 /* TPRouter.m */,
+				ACFED1B21787338F00AD1920 /* TPRouteRequest.h */,
+				ACFED1B31787338F00AD1920 /* TPRouteRequest.m */,
+			);
+			name = Routing;
+			sourceTree = "<group>";
+		};
+		ACFED1AD1787328C00AD1920 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				ACFED1B51787340B00AD1920 /* TPFilterProtocol.h */,
+				ACFED1B61787349B00AD1920 /* TPAnonymousFilter.h */,
+				ACFED1B71787349B00AD1920 /* TPAnonymousFilter.m */,
+				ACFED1B9178734D600AD1920 /* TPFilterChain.h */,
+				ACFED1BA178734D600AD1920 /* TPFilterChain.m */,
+			);
+			name = Filters;
+			sourceTree = "<group>";
+		};
+		ACFED1AE1787329400AD1920 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACFED18C1787304800AD1920 /* Turnpike.m in Sources */,
+				ACFED1B1178732C100AD1920 /* TPRouter.m in Sources */,
+				ACFED1B41787338F00AD1920 /* TPRouteRequest.m in Sources */,
+				ACFED1B81787349B00AD1920 /* TPAnonymousFilter.m in Sources */,
+				ACFED1BB178734D600AD1920 /* TPFilterChain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
