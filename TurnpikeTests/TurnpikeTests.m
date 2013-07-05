@@ -143,7 +143,7 @@
     // Invoke our external route, and our TestFilter should catch the external url schema
     [router invokeExternalRouteFromURL:[NSString stringWithFormat:@"%@%@", urlSchema, route]];
     // Make sure we got the schema
-    STAssertEquals(testFilter.schema, urlSchema, @"Test Filter scheme should be equal to the external URL schema used to invoke the route");
+    STAssertTrue([testFilter.schema isEqualToString:urlSchema], @"Test Filter scheme should be equal to the external URL schema used to invoke the route");
     
     // Invoke an internal route, which does not have a schema
     [router invokeInternalRoute:route];
@@ -173,7 +173,7 @@
     // Invoke our route with our desired value
     [router invokeInternalRoute:[NSString stringWithFormat:@"test/route/with/%@", desiredValue]];
     
-    STAssertEquals(testValue, desiredValue, @"Anonymous filter should have set test value to desired value");
+    STAssertTrue([testValue isEqualToString: desiredValue], @"Anonymous filter should have set test value to desired value");
 }
 
 - (void)testFilterChainOrder {

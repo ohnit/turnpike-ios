@@ -29,11 +29,35 @@
         // Create the key value pair string (which has an & at the end if it is not the last pair
         NSString *keyValuePair = [NSString stringWithFormat:@"%@=%@%@", encodedKey, encodedValue, i == [queryParameters.allKeys count]-1 ? @"" : @"&"];
         
-        // Return query string
+        // Append our key value pair to our query string
         queryString = [queryString stringByAppendingString:keyValuePair];
     }
     
+    // Return query string
     return queryString;
+}
+
++ (NSDictionary *)dictionaryFromQueryString:(NSString *)queryString {
+    // Create a dictionary to hold the parameters that we're parsing
+    NSMutableDictionary *queryParameters = [NSMutableDictionary dictionary];
+    // Break up all the parameters in the query string (separated by '&' or ';') into 'key=value'
+    NSArray *parameters = [queryString componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"&;"]];
+    for (NSString *parameter in parameters) {
+        // Lets put the key and value as strings in an array
+        NSArray *keyValuePair = [parameter componentsSeparatedByString:@"="];
+        // If we don't have a key/value pair (two strings in the array) then this is malformed, so let's skip it
+        if (keyValuePair.count != 2) {
+            continue;
+        }
+        // Decode the key
+        NSString *decodedKey = [self decodeURI:[keyValuePair objectAtIndex:0]];
+        // Decode the value
+        NSString *decodedValue = [self decodeURI:[keyValuePair objectAtIndex:1]];
+        // Save our key value pair in our dictionary
+        [queryParameters setValue:decodedValue forKey:decodedKey];
+    }
+    // Return an immutable copy of our parameters
+    return [queryParameters copy];
 }
 
 + (NSString *)encodeURI:(NSString *)string {

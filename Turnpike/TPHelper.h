@@ -14,7 +14,7 @@
 @interface TPHelper : NSObject
 
 ///-------------------------------
-/// @name Creating Query Strings
+/// @name Creating & Parsing Query Strings
 ///-------------------------------
 /**
  Creates a URI encoded query string from an NSDictionary, which can be used for passing data to apps.
@@ -22,6 +22,13 @@
  @return A URI encoded query string.
  */
 + (NSString *)queryStringFromDictionary:(NSDictionary *)queryParameters;
+
+/**
+ Takes a query string with URI encode parameters and returns an NSDictionary with string values.
+ @param queryString A query string to parse.
+ @return An NSDictionary of parameters from the query string.
+ */
++ (NSDictionary *)dictionaryFromQueryString:(NSString *)queryString;
 
 ///-------------------------------
 /// @name URI Encoding & Decoding
