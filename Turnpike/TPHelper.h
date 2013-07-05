@@ -37,7 +37,7 @@
  @param url The URL to try and open.
  @return If no apps respond to the URL, this will return `NO`, otherwise it will return `YES`.
  */
-+ (NSString *)decodeURI:(NSString *)decodeURI;
++ (NSString *)decodeURI:(NSString *)string;
 
 ///-------------------------------
 /// @name Launching External Apps
