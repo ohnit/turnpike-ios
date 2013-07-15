@@ -136,7 +136,7 @@
     // This is our test filter, as defined at the top of RoutableTests.m
     TestFilter *testFilter = [[TestFilter alloc] init];
     // Add the filter to our router
-    [router addFilter:testFilter];
+    [router appendFilter:testFilter];
     // Make sure our filter's schema variable is nil, as it should not be initialized
     STAssertNil(testFilter.schema, @"Test Filter schema should be nil because we haven't run an external route yet.");
     
@@ -161,7 +161,7 @@
     TPRouter *router = [TPRouter router];
     
     // Create and add our anonymous filter to test
-    [router addAnonymousFilter:^(TPRouteRequest *request, TPFilterChain *filterChain) {
+    [router appendAnonymousFilter:^(TPRouteRequest *request, TPFilterChain *filterChain) {
         testValue = [request.routeParameters valueForKey:@"value"];
         
         [filterChain doFilterWithRequest:request];
@@ -185,7 +185,7 @@
     TPRouter *router = [TPRouter router];
     
     // Create our first filter
-    [router addAnonymousFilter:^(TPRouteRequest *request, TPFilterChain *filterChain) {
+    [router appendAnonymousFilter:^(TPRouteRequest *request, TPFilterChain *filterChain) {
         // Set testValue to the first value
         testValue = filterValueOne;
         // Continue the filter chain
@@ -202,7 +202,7 @@
     STAssertEquals(testValue, filterValueOne, @"With only the first filter, the test value should be equal to filter value one");
     
     // Create our second filter
-    [router addAnonymousFilter:^(TPRouteRequest *request, TPFilterChain *filterChain) {
+    [router appendAnonymousFilter:^(TPRouteRequest *request, TPFilterChain *filterChain) {
         // Set testValue to the second value
         testValue = filterValueTwo;
         // Continue the filter chain

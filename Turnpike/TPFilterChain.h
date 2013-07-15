@@ -40,7 +40,7 @@
  @param request The route request to pass to the filters and routing callback.
  @param callback The callback mapped to the invoked route.
  */
-+ (void) dofilterChainWithFilters:(NSArray *)filters Request:(TPRouteRequest *)request AndCallback:(TPRoutingCallback)callback;
++ (void) dofilterChainWithFilters:(NSArray *)filters Request:(TPRouteRequest *)request AndCallback:(TPRouteDestination)callback;
 ///-------------------------------
 /// @name Filter Interaction
 ///-------------------------------

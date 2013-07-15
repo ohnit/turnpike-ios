@@ -20,7 +20,7 @@
 /**
  The routing callback to invoke when no route is matched upon invocation.
  */
-@property (strong, nonatomic) TPRoutingCallback defaultRoute;
+@property (strong, nonatomic) TPRouteDestination defaultRoute;
 
 /**
  Routes that the user has defined
@@ -45,7 +45,7 @@
 }
 
 @synthesize defaultRoute=_defaultRoute;
-- (TPRoutingCallback)defaultRoute {
+- (TPRouteDestination)defaultRoute {
     if (!_defaultRoute) {
         _defaultRoute = ^(TPRouteRequest *request) {
             
@@ -66,7 +66,7 @@
     // The route request which will get set either when the incoming route is matched to a defined route, or when it is not matched and falls back on the default route
     TPRouteRequest *request = nil;
     // The callback to execute at the end of the filter chain. Either this will be the value of the key / value pair of the route it matches, or it will be whatever the default route is defined to be (it does nothing, by default)
-    TPRoutingCallback callback = nil;
+    TPRouteDestination callback = nil;
     // The route being invoked in route segments, from the route split by '/'s
     NSArray *routeSegments = [route componentsSeparatedByString:@"/"];
     // Start checking through each of our defined routes
@@ -136,7 +136,7 @@
 
 #pragma mark Mapping Routes
 
-- (void)mapRoute:(NSString *)format ToCallback:(TPRoutingCallback)callback {
+- (void)mapRoute:(NSString *)format ToCallback:(TPRouteDestination)callback {
     // Create a temp mutable copy to add a key to
     NSMutableDictionary *tempDefinedRoutes = [self.definedRoutes mutableCopy];
     // Add a key to the mutable copy
@@ -145,19 +145,19 @@
     self.definedRoutes = [tempDefinedRoutes copy];
 }
 
-- (void)mapDefaultToCallback:(TPRoutingCallback)callback {
+- (void)mapDefaultToCallback:(TPRouteDestination)callback {
     // Set the default route
     self.defaultRoute = callback;
 }
 
 #pragma mark Filter Chains
 
-- (void)addFilter:(id <TPFilterProtocol>)filter {
+- (void)appendFilter:(id <TPFilterProtocol>)filter {
     // Set the filters array to the filters array + the new filter
     self.filters = [self.filters arrayByAddingObject:filter];
 }
 
-- (void)addAnonymousFilter:(TPFilterBlock)filterBlock {
+- (void)appendAnonymousFilter:(TPFilterBlock)filterBlock {
     // Create the anonymous filter from the filter block
     TPAnonymousFilter *filter = [TPAnonymousFilter filterWithBlock:filterBlock];
     // Set the filters array to the filters array + the new filter
@@ -166,11 +166,7 @@
 
 #pragma mark Invoking URLs & Routes
 
-- (void)invokeInternalRoute:(NSString *)route {
-    [self invokeRoute:route WithSchema:nil AndQueryParameters:nil];
-}
-
-- (void)invokeExternalRouteFromURL:(NSString *)url {
+- (void)resolveURL:(NSURL *)url {
     // Parse schema and query parameters and invoke route
     NSString *accumulatedQueryString = @"";
     NSString *queryString = nil;

@@ -27,16 +27,16 @@
     return _sharedRouter;
 }
 
-+ (void)mapRoute:(NSString *)format ToCallback:(TPRoutingCallback)callback {
++ (void)mapRoute:(NSString *)format ToCallback:(TPRouteDestination)callback {
     [[self sharedRouter] mapRoute:format ToCallback:callback];
 }
 
-+ (void)mapDefaultToCallback:(TPRoutingCallback)callback {
++ (void)mapDefaultToCallback:(TPRouteDestination)callback {
     [[self sharedRouter] mapDefaultToCallback:callback];
 }
 
 + (void)addFilter:(id <TPFilterProtocol>)filter {
-    [[self sharedRouter] addFilter:filter];
+    [[self sharedRouter] appendFilter:filter];
 }
 
 + (void)addAnonymousFilter:(TPFilterBlock)filterBlock {
@@ -47,11 +47,11 @@
     [[self sharedRouter] invokeInternalRoute:route];
 }
 
-+ (void)invokeExternalRouteFromURL:(NSString *)url {
-    [[self sharedRouter] invokeExternalRouteFromURL:url];
++ (void)resolveURL:(NSURL *)url {
+    [[self sharedRouter] resolveURL:url];
 }
 
-+ (void)invokeExternalURL:(NSString *)url {
++ (void)invokeURL:(NSURL *)url {
     [TPHelper invokeExternalURL:url];
 }
 
@@ -59,8 +59,12 @@
     [TPHelper invokeExternalAppWithSchema:schema Route:route AndQueryParameters:queryParameters];
 }
 
-+ (BOOL)canInvokeExternalURL:(NSString *)url {
++ (BOOL)canInvokeURL:(NSURL *)url {
     return [TPHelper canInvokeExternalURL:url];
+}
+
++ (BOOL)canInvokeAppWithSchema:(NSString *)schema {
+    
 }
 
 @end

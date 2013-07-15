@@ -141,13 +141,13 @@
  @param format A route in route format (i.e. "users/:id" or "logout")
  @param callback The callback to run when the route is invoked
  */
-+ (void)mapRoute:(NSString *)format ToCallback:(TPRoutingCallback)callback;
++ (void)mapRoute:(NSString *)format ToCallback:(TPRouteDestination)callback;
 
 /**
  Set an anonymous callback as the default route to fallback to when no route is matched.
  @param callback The callback to run when the URL is triggered in `open:`
  */
-+ (void)mapDefaultToCallback:(TPRoutingCallback)callback;
++ (void)mapDefaultToCallback:(TPRouteDestination)callback;
 
 ///-------------------------------
 /// @name Filter Chains
@@ -169,16 +169,10 @@
 ///-------------------------------
 
 /**
- Invokes a route's mapped callback from within the app. After passing the request through any filters this router may have, the route's mapped callback gets invoked. Expects a route in route format, rather than a URL.
- @param route The route to invoke, in route format (i.e. `logout`, `users/16`, `about/team/contact`)
- */
-+ (void)invokeInternalRoute:(NSString *)route;
-
-/**
  Invokes a route's mapped callback from outside the app. After passing the request through any filters this router may have, the route's mapped callback gets invoked. Expects a route in URL form, as passed by `– application:handleOpenURL:` or `– application:openURL:sourceApplication:annotation:`.
  @param url The URL to invoke, as a [URL encoded string in a proper URL format](http://www.ietf.org/rfc/rfc1738.txt "RFC 1738") (i.e. `com.mycompany.MyApp:logout`, `com.mycompany.MyApp:users/16?highlight=portfolio`, `com.mycompany.MyApp:about/team/contact?city=san%20francisco`).
  */
-+ (void)invokeExternalRouteFromURL:(NSString *)url;
++ (void)resolveURL:(NSURL *)url;
 
 ///-------------------------------
 /// @name Launching External Apps
@@ -187,7 +181,7 @@
  A convenience method for opening a URL using `UIApplication` `openURL:`.
  @param url The URL the OS will open (i.e. "http://google.com" for a web link or "myapp:someitem/something" for an app deep link)
  */
-+ (void)invokeExternalURL:(NSString *)url;
++ (void)invokeURL:(NSString *)url;
 
 /**
  A convenience method for opening a URL using `UIApplication` `openURL:` with deep link specific parameters.
@@ -195,13 +189,15 @@
  @param route The route of the app you're trying to open.
  @param queryParameters The query parameters you wish to send to the app as a query string.
  */
-+ (void)invokeExternalAppWithSchema:(NSString *)schema Route:(NSString *)route AndQueryParameters:(NSDictionary *)queryParameters;
++ (void)invokeAppWithSchema:(NSString *)schema Route:(NSString *)route AndQueryParameters:(NSDictionary *)queryParameters;
 
 /**
  A convenience method for opening a URL using `UIApplication` `canOpenURL:`.
  @param url The URL to try and open.
  @return If no apps respond to the URL, this will return `NO`, otherwise it will return `YES`.
  */
-+ (BOOL)canInvokeExternalURL:(NSString *)url;
++ (BOOL)canInvokeURL:(NSString *)url;
+
++ (BOOL)canInvokeAppWithSchema:(NSString *)schema;
 
 @end

@@ -13,7 +13,7 @@
 /**
 Alias for `(^TPRoutingCallback)(TPRouteRequest *request)`. Used as the callback block to map to routes.
  */
-typedef void (^TPRoutingCallback)(TPRouteRequest *request);
+typedef void (^TPRouteDestination)(TPRouteRequest *request);
 
 /**
  ## Overview
@@ -103,13 +103,13 @@ typedef void (^TPRoutingCallback)(TPRouteRequest *request);
  @param format A route in route format (i.e. "users/:id" or "logout")
  @param callback The callback to run when the route is invoked
  */
-- (void)mapRoute:(NSString *)format ToCallback:(TPRoutingCallback)callback;
+- (void)mapRoute:(NSString *)route ToCallback:(TPRouteDestination)callback;
 
 /**
  Set an anonymous callback as the default route to fallback to when no route is matched.
  @param callback The callback to run when the URL is triggered in `open:`
  */
-- (void)mapDefaultToCallback:(TPRoutingCallback)callback;
+- (void)mapDefaultToCallback:(TPRouteDestination)callback;
 
 ///-------------------------------
 /// @name Filter Chains
@@ -119,27 +119,21 @@ typedef void (^TPRoutingCallback)(TPRouteRequest *request);
  Add a filter to the filter chain.
  @param filter An object that responds to `<TPFilterProtocol>`. If you would rather use a block than create a new class, use `addNewAnonymousFilter:` instead.
  */
-- (void)addFilter:(id <TPFilterProtocol>)filter;
+- (void)appendFilter:(id <TPFilterProtocol>)filter;
 /**
  Add an anonymous filter to the filter chain.
  @param filterBlock a `TPFilterBlock`. If you would rather create a new class than use a block, use `addFilter:` instead.
  */
-- (void)addAnonymousFilter:(TPFilterBlock)filterBlock;
+- (void)appendAnonymousFilter:(TPFilterBlock)filterBlock;
 
 ///-------------------------------
 /// @name Invoking URLs & Routes
 ///-------------------------------
 
 /**
- Invokes a route's mapped callback from within the app. After passing the request through any filters this router may have, the route's mapped callback gets invoked. Expects a route in route format, rather than a URL.
- @param route The route to invoke, in route format (i.e. `logout`, `users/16`, `about/team/contact`)
- */
-- (void)invokeInternalRoute:(NSString *)route;
-
-/**
  Invokes a route's mapped callback from outside the app. After passing the request through any filters this router may have, the route's mapped callback gets invoked. Expects a route in URL form, as passed by `– application:handleOpenURL:` or `– application:openURL:sourceApplication:annotation:`.
  @param url The URL to invoke, as a [URL encoded string in a proper URL format](http://www.ietf.org/rfc/rfc1738.txt "RFC 1738") (i.e. `com.mycompany.MyApp:logout`, `com.mycompany.MyApp:users/16?highlight=portfolio`, `com.mycompany.MyApp:about/team/contact?city=san%20francisco`).
  */
-- (void)invokeExternalRouteFromURL:(NSString *)url;
+- (void)resolveURL:(NSURL *)url;
 
 @end

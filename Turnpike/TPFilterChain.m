@@ -11,13 +11,13 @@
 @interface TPFilterChain()
 
 @property (strong, nonatomic) NSArray *filters;
-@property (strong, nonatomic) TPRoutingCallback callback;
+@property (strong, nonatomic) TPRouteDestination callback;
 
 @end
 
 @implementation TPFilterChain
 
-+ (void) dofilterChainWithFilters:(NSArray *)filters Request:(TPRouteRequest *)request AndCallback:(TPRoutingCallback)callback {
++ (void) dofilterChainWithFilters:(NSArray *)filters Request:(TPRouteRequest *)request AndCallback:(TPRouteDestination)callback {
     TPFilterChain *filterChain = [[TPFilterChain alloc] init];
     filterChain.filters = filters;
     filterChain.callback = callback;
