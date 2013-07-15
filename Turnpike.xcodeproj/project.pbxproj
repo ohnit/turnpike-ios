@@ -96,6 +96,8 @@
 		ACFED1BA178734D600AD1920 /* TPFilterChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPFilterChain.m; sourceTree = "<group>"; };
 		ACFED1BC178740BE00AD1920 /* TPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPHelper.h; sourceTree = "<group>"; };
 		ACFED1BD178740BE00AD1920 /* TPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPHelper.m; sourceTree = "<group>"; };
+		B4BF5DF11794C0E700C9726F /* Turnpike.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Turnpike.md; path = docs/Turnpike.md; sourceTree = "<group>"; };
+		B4BF5DF21794C14000C9726F /* TPRouter.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TPRouter.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		ACFED1781787304800AD1920 = {
 			isa = PBXGroup;
 			children = (
+				B4BF5DEF1794C00D00C9726F /* docs */,
 				ACFED1861787304800AD1920 /* Turnpike */,
 				ACFED19B1787304800AD1920 /* TurnpikeTests */,
 				ACFED1831787304800AD1920 /* Frameworks */,
@@ -220,6 +223,15 @@
 				ACFED1BD178740BE00AD1920 /* TPHelper.m */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		B4BF5DEF1794C00D00C9726F /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				B4BF5DF11794C0E700C9726F /* Turnpike.md */,
+				B4BF5DF21794C14000C9726F /* TPRouter.md */,
+			);
+			name = docs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +525,7 @@
 				ACF217AB178F9117004A9DF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACFED17C1787304800AD1920 /* Build configuration list for PBXProject "Turnpike" */ = {
 			isa = XCConfigurationList;
