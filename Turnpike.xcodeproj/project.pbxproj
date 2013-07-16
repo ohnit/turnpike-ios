@@ -100,6 +100,7 @@
 		B4BF5DF31794C3F400C9726F /* TPRouter.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TPRouter.md; path = docs/TPRouter.md; sourceTree = "<group>"; };
 		B4BF5DF41794C46900C9726F /* TPRouteRequest.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TPRouteRequest.md; path = docs/TPRouteRequest.md; sourceTree = "<group>"; };
 		B4BF5DF51794C51800C9726F /* TPFilter.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TPFilter.md; path = docs/TPFilter.md; sourceTree = "<group>"; };
+		B4BF5DF61794C5D800C9726F /* TPAnonymousFilter.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TPAnonymousFilter.md; path = docs/TPAnonymousFilter.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +231,7 @@
 		B4BF5DEF1794C00D00C9726F /* docs */ = {
 			isa = PBXGroup;
 			children = (
+				B4BF5DF61794C5D800C9726F /* TPAnonymousFilter.md */,
 				B4BF5DF51794C51800C9726F /* TPFilter.md */,
 				B4BF5DF41794C46900C9726F /* TPRouteRequest.md */,
 				B4BF5DF31794C3F400C9726F /* TPRouter.md */,
