@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "TPFilterChain.h"
 
+/**
+  `Turnpike` is a wrapper for a shared `TPRouter` object. Most apps will only need one `TPRouter` object, and for convenience's sake, the `Turnpike` class exposes the instance methods of the a shared `TPRouter` as class methods. `Turnpike` also provides some helper methods which wrap native functionality for launching other apps.
+ */
 @interface Turnpike : NSObject
 
 ///-------------------------------
