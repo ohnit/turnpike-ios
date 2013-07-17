@@ -1,3 +1,5 @@
+.. _route-requests:
+
 ##############
 Route Requests
 ##############
@@ -6,8 +8,10 @@ Route Requests
 
 The ``TPRouteRequest`` contains both external invocation specific information, as well as route specific information. If you are writing a route or filter, you should check to see if any of the fields are ``nil``, for any of the reasons listed below.
 
-External Invocation Specific Information
-========================================
+.. _rr-deeplink-metadata:
+
+Deeplink Metadata
+=================
 
 Of the ``TPRouteRequest``'s 4 properties, 2 of them, the ``urlSchema`` and ``queryParameters``, are used pass information from outside the app. If invoked internally, these values will be ``nil``.
 
