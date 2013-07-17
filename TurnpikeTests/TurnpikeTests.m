@@ -133,7 +133,7 @@
     // We'll create a new router to add filters to
     TPRouter *router = [TPRouter router];
     
-    // This is our test filter, as defined at the top of RoutableTests.m
+    // This is our test filter, as defined at the top of TurnpikeTests.m
     TestFilter *testFilter = [[TestFilter alloc] init];
     // Add the filter to our router
     [router appendFilter:testFilter];

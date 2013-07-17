@@ -1,10 +1,12 @@
 .. _mapping-routes:
 
-###########################
-Mapping Routes to Callbacks
-###########################
+##############################
+Mapping Routes to Destinations
+##############################
  
-Turnpike can map :ref:`many mapped routes <mr-mapped-routes>` and :ref:`one default route <mr-default-route>`.
+Turnpike can map routes to :ref:`Destinations <mr-assigning-destinations>`. Destinations represent **where to navigate** and/or **what action to take** upon a user's entry into an app via deeplink URI.
+
+Turnpike supports :ref:`many mapped routes <mr-mapped-routes>` and :ref:`one default route <mr-default-route>`.
 
 .. _mr-default-route:
 
@@ -34,7 +36,6 @@ Mapped routes are one of:
 
 Assigning Destinations to Routes 
 --------------------------------
-
 
 For example, if a resolved deeplink should push a Product Page onto our UINavigation Controller, we might use a callback like this:
 

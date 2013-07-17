@@ -31,7 +31,7 @@
  */
 - (void)testDefaultRoute;
 /**
- Test two separate routers, just to prove theres no singleton magic behind Routable.
+ Test two separate routers, just to prove theres no singleton magic behind Turnpike.
  */
 - (void)testSeparateRouters;
 
