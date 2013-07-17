@@ -166,7 +166,8 @@
 
 #pragma mark Invoking URLs & Routes
 
-- (void)resolveURL:(NSURL *)url {
+- (void)resolveURL:(NSURL *)urle {
+    NSString *url = urle.absoluteString;
     // Parse schema and query parameters and invoke route
     NSString *accumulatedQueryString = @"";
     NSString *queryString = nil;

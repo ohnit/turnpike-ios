@@ -44,7 +44,7 @@
     }];
     
     // Invoke our route with our desired user id
-    [router invokeInternalRoute:[NSString stringWithFormat:@"users/%@",desiredUserID]];
+    [router resolveURL:[NSURL URLWithString:[NSString stringWithFormat:@"users/%@",desiredUserID]]];
     
     // Assert that the user id we got in our route is the same as our desired user id
     STAssertTrue([desiredUserID isEqualToString:receivedUserID], [NSString stringWithFormat:@"Should have received a user id of %@, instead received %@", desiredUserID, receivedUserID]);
@@ -64,7 +64,7 @@
     }];
     
     // Invoke a route that does not exist
-    [router invokeInternalRoute:@"a/route/that/does/not/exist"];
+    [router resolveURL:[NSURL URLWithString:@"a/route/that/does/not/exist"]];
     
     // Assert that our string is still nil
     STAssertNil(shouldBeNil, @"Test string should be nil");
@@ -83,7 +83,7 @@
     }];
     
     // Invoke a route that does not exist
-    [router invokeInternalRoute:@"a/route/that/does/not/exist"];
+    [router resolveURL:[NSURL URLWithString:@"a/route/that/does/not/exist"]];
     
     // Assert that matchedRoute is nil
     STAssertNil(matchedRoute, [NSString stringWithFormat:@"Matched Route should be nil, instead it's \"%@\"", matchedRoute]);
@@ -114,12 +114,12 @@
     }];
     
     // Invoke our route on the first router
-    [mainRouter invokeInternalRoute:@"test/route"];
+    [mainRouter resolveURL:[NSURL URLWithString:@"test/route"]];
     // Assert that the first router's value was set
     STAssertEquals(returnedValue, mainRouterValue, @"Returned value should be equal to the main router value after routing");
     
     // Invoke our route on the second router
-    [otherRouter invokeInternalRoute:@"test/route"];
+    [otherRouter resolveURL:[NSURL URLWithString:@"test/route"]];
     // Assert that the second router's value was set
     STAssertEquals(returnedValue, otherRouterValue, @"Returned value should be equal to the other router value after routing");
 }
@@ -141,12 +141,12 @@
     STAssertNil(testFilter.schema, @"Test Filter schema should be nil because we haven't run an external route yet.");
     
     // Invoke our external route, and our TestFilter should catch the external url schema
-    [router invokeExternalRouteFromURL:[NSString stringWithFormat:@"%@%@", urlSchema, route]];
+    [router resolveURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", urlSchema, route]]];
     // Make sure we got the schema
     STAssertTrue([testFilter.schema isEqualToString:urlSchema], @"Test Filter scheme should be equal to the external URL schema used to invoke the route");
     
     // Invoke an internal route, which does not have a schema
-    [router invokeInternalRoute:route];
+    [router resolveURL:[NSURL URLWithString:route]];
     // Schema should be nil because our filter just processed an internal invocation request
     STAssertNil(testFilter.schema, @"Internally invoked routes should not have a schema, it should be nil");
 }
@@ -171,7 +171,7 @@
     [router mapRoute:@"test/route/with/:value" ToCallback:^(TPRouteRequest *request) {}];
     
     // Invoke our route with our desired value
-    [router invokeInternalRoute:[NSString stringWithFormat:@"test/route/with/%@", desiredValue]];
+    [router resolveURL:[NSURL URLWithString:[NSString stringWithFormat:@"test/route/with/%@", desiredValue]]];
     
     STAssertTrue([testValue isEqualToString: desiredValue], @"Anonymous filter should have set test value to desired value");
 }
@@ -196,7 +196,7 @@
     STAssertNil(testValue, @"Before invoking with our filters, the test value should be nil");
     
     // Run a route to run our filter
-    [router invokeInternalRoute:@"some/route"];
+    [router resolveURL:[NSURL URLWithString:@"some/route"]];
     
     // The test value should be equal to the first filter value, set by our first filter
     STAssertEquals(testValue, filterValueOne, @"With only the first filter, the test value should be equal to filter value one");
@@ -210,7 +210,7 @@
     }];
     
     // Run a route to run our filters
-    [router invokeInternalRoute:@"some/route"];
+    [router resolveURL:[NSURL URLWithString:@"some/route"]];
     
     // The test value should not be equal to the first filter value because we've added a second filter that should have changed the test value after the first filter
     STAssertFalse([filterValueOne isEqualToString:testValue], @"With our second filter, the test value should be equal to filter value two, not filter value one.");
