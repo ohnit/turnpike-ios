@@ -27,7 +27,7 @@ Getting Started
 
 .. highlight:: text
 
-.. rubric:: Developed by URX__ to enable mobile deeplinking in apps.
+.. rubric:: Turnpike was developed by URX__ to enable mobile deeplinking in apps.
 
 .. __: http://www.urx.com/
 
