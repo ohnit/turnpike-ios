@@ -136,18 +136,18 @@
 
 #pragma mark Mapping Routes
 
-- (void)mapRoute:(NSString *)format ToCallback:(TPRouteDestination)callback {
+- (void)mapRoute:(NSString *)format ToDestination:(TPRouteDestination)destination {
     // Create a temp mutable copy to add a key to
     NSMutableDictionary *tempDefinedRoutes = [self.definedRoutes mutableCopy];
     // Add a key to the mutable copy
-    [tempDefinedRoutes setValue:callback forKey:format];
+    [tempDefinedRoutes setValue:destination forKey:format];
     // Set the defined routes to an immutable copy of our temp mutable copy
     self.definedRoutes = [tempDefinedRoutes copy];
 }
 
-- (void)mapDefaultToCallback:(TPRouteDestination)callback {
+- (void)mapDefaultToDestination:(TPRouteDestination)destination {
     // Set the default route
-    self.defaultRoute = callback;
+    self.defaultRoute = destination;
 }
 
 #pragma mark Filter Chains
@@ -166,66 +166,8 @@
 
 #pragma mark Invoking URLs & Routes
 
-- (void)resolveURL:(NSURL *)urle {
-    NSString *url = urle.absoluteString;
-    // Parse schema and query parameters and invoke route
-    NSString *accumulatedQueryString = @"";
-    NSString *queryString = nil;
-    NSString *accumulatedSchema = @"";
-    NSString *schema = nil;
-    NSString *resourcePath = nil;
+- (void)resolveURL:(NSURL *)url {
     
-    // Strip out Query String
-    for (int i = url.length-1; i >= 0; i--) {
-        if ([url characterAtIndex:i] == '?') {
-            resourcePath = [url substringToIndex:i];
-            queryString = [accumulatedQueryString copy];
-            break;
-        }
-        else {
-            accumulatedQueryString = [[NSString stringWithFormat:@"%c",[url characterAtIndex:i]] stringByAppendingString:accumulatedQueryString];
-        }
-    }
-    // If there was no query string, then the query string is blank and the resource path is the url (before trimming)
-    if (queryString == nil) {
-        queryString = @"";
-        resourcePath = url;
-    }
-    
-    // Strip out the url scheme from the resource path
-    for (int i = 0; i < url.length; i++) {
-        // If we hit a slash before we hit a colon, there is no schema and this is invoked internally
-        if ([url characterAtIndex:i] == '/') {
-            schema = nil;
-            break;
-        }
-        
-        // Lets continue looking for the schema
-        accumulatedSchema = [accumulatedSchema stringByAppendingString:[NSString stringWithFormat:@"%c", [url characterAtIndex:i]]];
-        
-        // We've got our schema, lets break out of this loop
-        if ([url characterAtIndex:i] == ':') {
-            schema = accumulatedSchema;
-            break;
-        }
-    }
-    // If we found a schema, lets strip it from the resource path
-    if(schema != nil) resourcePath = [resourcePath substringFromIndex:([schema length] + 1)];
-    
-    // Strip out any leading slashes, if any, from the resource path
-    while (resourcePath.length > 0 && [resourcePath characterAtIndex:0] == '/') {
-        // If the path is just "/" resolve to ""
-        if (resourcePath.length == 1) {
-            resourcePath = @"";
-        }
-        // Remove front most slash
-        else {
-            resourcePath = [resourcePath substringFromIndex:1];
-        }
-    }
-    
-    // Lets invoke our route
-    [self invokeRoute:resourcePath WithSchema:schema AndQueryParameters:[TPHelper dictionaryFromQueryString:queryString]];
 }
 
 @end

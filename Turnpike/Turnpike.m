@@ -27,12 +27,12 @@
     return _sharedRouter;
 }
 
-+ (void)mapRoute:(NSString *)format ToCallback:(TPRouteDestination)callback {
-    [[self sharedRouter] mapRoute:format ToCallback:callback];
++ (void)mapRoute:(NSString *)format ToDestination:(TPRouteDestination)destination {
+    [[self sharedRouter] mapRoute:format ToDestination:destination];
 }
 
-+ (void)mapDefaultToCallback:(TPRouteDestination)callback {
-    [[self sharedRouter] mapDefaultToCallback:callback];
++ (void)mapDefaultToDestination:(TPRouteDestination)destination {
+    [[self sharedRouter] mapDefaultToDestination:destination];
 }
 
 + (void)addFilter:(id <TPFilterProtocol>)filter {
