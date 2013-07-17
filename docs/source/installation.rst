@@ -34,8 +34,8 @@ You can now use Turnpike in your app by importing it:
 
 -----------------------------------------------------------------------    
 
-
 .. _i-with-pods:
+
 ****************************
 Installation Using CocoaPods
 ****************************
