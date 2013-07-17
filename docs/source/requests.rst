@@ -17,9 +17,9 @@ Of the ``TPRouteRequest``'s 4 properties, 2 of them, the ``urlSchema`` and ``que
 	    [CouponProcessor validateAndProcessCoupon:[request.queryParameters valueForKey:@"coupon_id"]];
 	}
 
-The ``urlSchema`` should be one of the custom URL schemas that your app has registered (see "Implementing Custom URL Schemes" in Apple__'s Advanced App Tricks documentation). If you are invoking a route internally, this value will be ``nil``.
+The ``urlSchema`` should be one of the custom URL schemas that your app has registered (see "`Implementing Custom URL Schemes`_" in Apple's Advanced App Tricks documentation). If you are invoking a route internally, this value will be ``nil``.
 
-.. __:http://developer.apple.com/library/ios/#documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html
+.. _Implementing Custom URL Schemes: http://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html#//apple_ref/doc/uid/TP40007072-CH7-SW18
 
 The ``queryParameters`` are ``NSString`` key/value pairs parsed from the query string (if it has one). If you are inovking a route internally, this value will be nil.
 

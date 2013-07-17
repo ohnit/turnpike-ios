@@ -1,8 +1,8 @@
 .. _mapping-routes:
 
-##############
-Mapping Routes
-##############
+#######
+Routing
+#######
  
 Turnpike can map both defined routes and a default route.
 
