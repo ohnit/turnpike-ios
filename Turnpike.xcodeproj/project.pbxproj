@@ -24,6 +24,7 @@
 		AC1E86931795B178006D3839 /* TPParsingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1E86921795B178006D3839 /* TPParsingHelper.m */; };
 		AC1E86961795C050006D3839 /* TPURIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1E86951795C050006D3839 /* TPURIHelper.m */; };
 		AC1E86991795D68F006D3839 /* ParsingHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1E86981795D68F006D3839 /* ParsingHelperTests.m */; };
+		AC63021E1796B92F00609666 /* URIHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC63021D1796B92F00609666 /* URIHelperTests.m */; };
 		ACB0B8CE178F8E470048764A /* TPRouter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACFED1AF178732C100AD1920 /* TPRouter.h */; };
 		ACB0B8CF178F8E490048764A /* TPRouteRequest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACFED1B21787338F00AD1920 /* TPRouteRequest.h */; };
 		ACB0B8D0178F8E4B0048764A /* TPFilterProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACFED1B51787340B00AD1920 /* TPFilterProtocol.h */; };
@@ -82,6 +83,8 @@
 		AC1E86951795C050006D3839 /* TPURIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPURIHelper.m; sourceTree = "<group>"; };
 		AC1E86971795D68F006D3839 /* ParsingHelperTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsingHelperTests.h; sourceTree = "<group>"; };
 		AC1E86981795D68F006D3839 /* ParsingHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsingHelperTests.m; sourceTree = "<group>"; };
+		AC63021C1796B92F00609666 /* URIHelperTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URIHelperTests.h; sourceTree = "<group>"; };
+		AC63021D1796B92F00609666 /* URIHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URIHelperTests.m; sourceTree = "<group>"; };
 		ACFED1811787304800AD1920 /* libTurnpike.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTurnpike.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFED1841787304800AD1920 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ACFED1881787304800AD1920 /* Turnpike-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Turnpike-Prefix.pch"; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 				AC1E86971795D68F006D3839 /* ParsingHelperTests.h */,
 				AC1E86981795D68F006D3839 /* ParsingHelperTests.m */,
 				ACFED19C1787304800AD1920 /* Supporting Files */,
+				AC63021C1796B92F00609666 /* URIHelperTests.h */,
+				AC63021D1796B92F00609666 /* URIHelperTests.m */,
 			);
 			path = TurnpikeTests;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 			files = (
 				ACFED1A31787304800AD1920 /* TurnpikeTests.m in Sources */,
 				AC1E86991795D68F006D3839 /* ParsingHelperTests.m in Sources */,
+				AC63021E1796B92F00609666 /* URIHelperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,7 +38,7 @@
     // This will be what we do get back
     __block NSString *receivedUserID = nil;
     // Create a users mapping
-    [router mapRoute:@"users/:user_id" ToCallback:^(TPRouteRequest *request) {
+    [router mapRoute:@"users/:user_id" ToDestination:^(TPRouteRequest *request) {
         // Set the user id we get from our route
         receivedUserID = [request.routeParameters valueForKey:@"user_id"];
     }];
@@ -58,7 +58,7 @@
     __block NSString *shouldBeNil = nil;
     
     // This is a route which should never be called
-    [router mapRoute:@"should/never/be/called" ToCallback:^(TPRouteRequest *request) {
+    [router mapRoute:@"should/never/be/called" ToDestination:^(TPRouteRequest *request) {
         // This will change our variable which should not change, because this should never get run
         shouldBeNil = @"clearly not nil";
     }];
@@ -77,7 +77,7 @@
     __block NSString *matchedRoute = @"this should be nil because our route will not exist";
     
     // Set the callback for the default route to set matched route to the route it matches (which should be nil)
-    [router mapDefaultToCallback:^(TPRouteRequest *request) {
+    [router mapDefaultToDestination:^(TPRouteRequest *request) {
         // This should set matchedRoute to nil
         matchedRoute = request.matchedRoute;
     }];
@@ -104,12 +104,12 @@
     TPRouter *otherRouter = [TPRouter router];
     
     // Setup our route in the first router
-    [mainRouter mapRoute:@"test/route" ToCallback:^(TPRouteRequest *request) {
+    [mainRouter mapRoute:@"test/route" ToDestination:^(TPRouteRequest *request) {
         returnedValue = mainRouterValue;
     }];
     
     // Setup our router in the second router
-    [otherRouter mapRoute:@"test/route" ToCallback:^(TPRouteRequest *request) {
+    [otherRouter mapRoute:@"test/route" ToDestination:^(TPRouteRequest *request) {
         returnedValue = otherRouterValue;
     }];
     
@@ -168,7 +168,7 @@
     }];
     
     // Add our test route with our value
-    [router mapRoute:@"test/route/with/:value" ToCallback:^(TPRouteRequest *request) {}];
+    [router mapRoute:@"test/route/with/:value" ToDestination:^(TPRouteRequest *request) {}];
     
     // Invoke our route with our desired value
     [router resolveURL:[NSURL URLWithString:[NSString stringWithFormat:@"test/route/with/%@", desiredValue]]];

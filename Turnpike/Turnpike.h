@@ -23,13 +23,13 @@
  @param format A route in route format (i.e. "users/:id" or "logout")
  @param callback The callback to run when the route is invoked
  */
-+ (void)mapRoute:(NSString *)format ToCallback:(TPRouteDestination)callback;
++ (void)mapRoute:(NSString *)format ToDestination:(TPRouteDestination)destination;
 
 /**
  Set an anonymous callback as the default route to fallback to when no route is matched.
  @param callback The callback to run when the URL is triggered in `open:`
  */
-+ (void)mapDefaultToCallback:(TPRouteDestination)callback;
++ (void)mapDefaultToDestination:(TPRouteDestination)destination;
 
 ///-------------------------------
 /// @name Filter Chains
