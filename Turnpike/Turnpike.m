@@ -35,11 +35,11 @@
     [[self sharedRouter] mapDefaultToDestination:destination];
 }
 
-+ (void)addFilter:(id <TPFilterProtocol>)filter {
++ (void)applyFilter:(id <TPFilterProtocol>)filter {
     [[self sharedRouter] appendFilter:filter];
 }
 
-+ (void)addAnonymousFilter:(TPFilterBlock)filterBlock {
++ (void)applyAnonymousFilter:(TPFilterBlock)filterBlock {
     [[self sharedRouter] appendAnonymousFilter:filterBlock];
 }
 

@@ -50,6 +50,27 @@
     STAssertTrue([desiredUserID isEqualToString:receivedUserID], [NSString stringWithFormat:@"Should have received a user id of %@, instead received %@", desiredUserID, receivedUserID]);
 }
 
+- (void)testABasicStrangeBrokenRoute {
+    // The router we'll test on
+    TPRouter *router = [TPRouter router];
+    
+    // This is what we should get back
+    NSString *desiredUserID = @"4";
+    // This will be what we do get back
+    __block NSString *receivedUserID = nil;
+    // Create a users mapping
+    [router mapRoute:@"users/:user_id" ToDestination:^(TPRouteRequest *request) {
+        // Set the user id we get from our route
+        receivedUserID = [request.routeParameters valueForKey:@"user_id"];
+    }];
+    
+    // Invoke our route with our desired user id
+    [router resolveURL:[NSURL URLWithString:[NSString stringWithFormat:@"/////////////////////users////////////////////////%@///////////////",desiredUserID]]];
+    
+    // Assert that the user id we got in our route is the same as our desired user id
+    STAssertTrue([desiredUserID isEqualToString:receivedUserID], [NSString stringWithFormat:@"Should have received a user id of %@, instead received %@", desiredUserID, receivedUserID]);
+}
+
 - (void)testEmptyRoute {
     // The router we'll test on
     TPRouter *router = [TPRouter router];
@@ -65,6 +86,26 @@
     
     // Invoke a route that does not exist
     [router resolveURL:[NSURL URLWithString:@"a/route/that/does/not/exist"]];
+    
+    // Assert that our string is still nil
+    STAssertNil(shouldBeNil, @"Test string should be nil");
+}
+
+- (void)testAStrangeBrokenRoute {
+    // The router we'll test on
+    TPRouter *router = [TPRouter router];
+    
+    // This value should remain nil
+    __block NSString *shouldBeNil = nil;
+    
+    // This is a route which should never be called
+    [router mapRoute:@"should/never/be/called" ToDestination:^(TPRouteRequest *request) {
+        // This will change our variable which should not change, because this should never get run
+        shouldBeNil = @"clearly not nil";
+    }];
+    
+    // Invoke a route that does not exist
+    [router resolveURL:[NSURL URLWithString:@"broken:::///////////////nooooo/:::::::::::::::::::::::yes///////////"]];
     
     // Assert that our string is still nil
     STAssertNil(shouldBeNil, @"Test string should be nil");
@@ -126,7 +167,7 @@
 
 - (void) testBasicFilter {
     // This is the external url schema to test
-    NSString *urlSchema = @"myURLSchema:";
+    NSString *urlSchema = @"myURLSchema";
     // This will be the nonexistant route to invoke
     NSString *route = @"an/awesome/route";
     
@@ -141,7 +182,7 @@
     STAssertNil(testFilter.schema, @"Test Filter schema should be nil because we haven't run an external route yet.");
     
     // Invoke our external route, and our TestFilter should catch the external url schema
-    [router resolveURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@", urlSchema, route]]];
+    [router resolveURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@:%@", urlSchema, route]]];
     // Make sure we got the schema
     STAssertTrue([testFilter.schema isEqualToString:urlSchema], @"Test Filter scheme should be equal to the external URL schema used to invoke the route");
     

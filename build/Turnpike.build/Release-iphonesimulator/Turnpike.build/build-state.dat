@@ -1,0 +1,411 @@
+TTurnpike
+v5
+r1
+cCheck dependencies
+cProcessPCH /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch.pth Turnpike/Turnpike-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/Turnpike.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouter.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPFilterChain.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterChain.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPURIHelper.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPURIHelper.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPParsingHelper.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPParsingHelper.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPHelper.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPHelper.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouteRequest.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouteRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPAnonymousFilter.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPAnonymousFilter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/libTurnpike.a normal i386
+cPBXCp Turnpike/TPRouter.h build/Release-iphonesimulator/include/Turnpike/TPRouter.h
+cPBXCp Turnpike/Turnpike.h build/Release-iphonesimulator/include/Turnpike/Turnpike.h
+cPBXCp Turnpike/TPRouteRequest.h build/Release-iphonesimulator/include/Turnpike/TPRouteRequest.h
+cPBXCp Turnpike/TPFilterProtocol.h build/Release-iphonesimulator/include/Turnpike/TPFilterProtocol.h
+cPBXCp Turnpike/TPFilterChain.h build/Release-iphonesimulator/include/Turnpike/TPFilterChain.h
+cPBXCp Turnpike/TPHelper.h build/Release-iphonesimulator/include/Turnpike/TPHelper.h
+cPBXCp Turnpike/TPAnonymousFilter.h build/Release-iphonesimulator/include/Turnpike/TPAnonymousFilter.h
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
+c0000000050EDEAFB0000000000000110
+t1357769467
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c0000000051C548C500000000003DDFA0
+t1371883717
+s4054944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c0000000051C548C400000000000015F7
+t1371883716
+s5623
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPAnonymousFilter.h
+c0000000051E6A719000000000000037A
+t1374070553
+s890
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPAnonymousFilter.m
+c0000000051E6A7190000000000000338
+t1374070553
+s824
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterChain.h
+c0000000051E6A7190000000000000480
+t1374070553
+s1152
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterChain.m
+c0000000051E6A71900000000000005F2
+t1374070553
+s1522
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterProtocol.h
+c0000000051E6A7190000000000000309
+t1374070553
+s777
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPHelper.h
+c0000000051E6A7190000000000000A9E
+t1374070553
+s2718
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPHelper.m
+c0000000051E6A71900000000000010C3
+t1374070553
+s4291
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPParsingHelper.h
+c0000000051E6A7190000000000000165
+t1374070553
+s357
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPParsingHelper.m
+c0000000051E6A71900000000000009D4
+t1374070553
+s2516
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouteRequest.h
+c0000000051E6A7190000000000000927
+t1374070553
+s2343
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouteRequest.m
+c0000000051E6A719000000000000039A
+t1374070553
+s922
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouter.h
+c0000000051E6A71900000000000009F8
+t1374070553
+s2552
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouter.m
+c0000000051E6B4600000000000001D5C
+t1374073952
+s7516
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPURIHelper.h
+c0000000051E6A719000000000000016B
+t1374070553
+s363
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPURIHelper.m
+c0000000051E6A7190000000000001237
+t1374070553
+s4663
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike-Prefix.pch
+c0000000051E6A719000000000000009D
+t1374070553
+s157
+i<Foundation/Foundation.h>
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h
+c0000000051E6B4600000000000000E0A
+t1374073952
+s3594
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.m
+c0000000051E6A7190000000000000435
+t1374070553
+s1077
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/TPAnonymousFilter.h
+t1374072196
+s890
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/TPFilterChain.h
+t1374072196
+s1152
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/TPFilterProtocol.h
+t1374072196
+s777
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/TPHelper.h
+t1374072196
+s2718
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/TPRouteRequest.h
+t1374072196
+s2343
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/TPRouter.h
+t1374072196
+s2552
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/Turnpike.h
+t1374072196
+s2476
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/libTurnpike.a
+t2
+s0
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPAnonymousFilter.o
+t2
+s0
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPFilterChain.o
+t2
+s0
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPHelper.o
+t2
+s0
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPParsingHelper.o
+t2
+s0
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouteRequest.o
+t2
+s0
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouter.o
+t2
+s0
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPURIHelper.o
+t2
+s0
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/Turnpike.LinkFileList
+c0000000051E6B58E0000000000000476
+t1374074254
+s1142
+
+N/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/Turnpike.o
+t2
+s0
+
+N/var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch.pth
+t2
+s0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesc992e90eed96b741^919def0eed96b741^---0#1#0#--18"Check dependencies36"340F0A16-F951-4D23-97CA-7FAD6F0F9B2B-
+
+CCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPAnonymousFilter.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPAnonymousFilter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395767055.067700
+e395767055.123351
+r1
+xCompileC
+xbuild/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPAnonymousFilter.o
+x/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPAnonymousFilter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPAnonymousFilter.m4012120fed96b741^98a31f0fed96b741^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPAnonymousFilter.m0000000000000000^3527"CompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPAnonymousFilter.o Turnpike/TPAnonymousFilter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-generated-files.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-own-target-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-all-target-headers.hmap -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-project-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources/i386 -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/../../../../Downloads/MobileAppTracking-ios -include /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch -MMD -MT dependencies -MF /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPAnonymousFilter.d --serialize-diagnostics /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPAnonymousFilter.dia -c /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPAnonymousFilter.m -o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPAnonymousFilter.o36"37A7C842-0221-4DB1-93A7-58F37E1360DF-
+
+CCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPFilterChain.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterChain.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395767055.067535
+e395767055.123713
+r1
+xCompileC
+xbuild/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPFilterChain.o
+x/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterChain.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Compile /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterChain.m0211120fed96b741^65c21f0fed96b741^---0#0#0#-19%DVTDocumentLocation2@88"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterChain.m0000000000000000^3503"CompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPFilterChain.o Turnpike/TPFilterChain.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-generated-files.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-own-target-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-all-target-headers.hmap -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-project-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources/i386 -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/../../../../Downloads/MobileAppTracking-ios -include /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch -MMD -MT dependencies -MF /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPFilterChain.d --serialize-diagnostics /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPFilterChain.dia -c /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterChain.m -o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPFilterChain.o36"E010A1A2-6821-4CBA-9671-EB2C5F25074C-
+
+CCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPHelper.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPHelper.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395767055.067621
+e395767055.213202
+r1
+xCompileC
+xbuild/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPHelper.o
+x/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPHelper.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPHelper.m4914120fed96b741^8e93360fed96b741^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPHelper.m0000000000000000^3473"CompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPHelper.o Turnpike/TPHelper.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-generated-files.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-own-target-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-all-target-headers.hmap -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-project-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources/i386 -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/../../../../Downloads/MobileAppTracking-ios -include /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch -MMD -MT dependencies -MF /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPHelper.d --serialize-diagnostics /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPHelper.dia -c /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPHelper.m -o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPHelper.o36"A599FEDC-352E-4644-8205-E3CB77D54773-
+
+CCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPParsingHelper.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPParsingHelper.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395767055.067596
+e395767055.123581
+r1
+xCompileC
+xbuild/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPParsingHelper.o
+x/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPParsingHelper.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPParsingHelper.m350d120fed96b741^a2b81f0fed96b741^---0#0#0#-19%DVTDocumentLocation2@90"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPParsingHelper.m0000000000000000^3515"CompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPParsingHelper.o Turnpike/TPParsingHelper.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-generated-files.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-own-target-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-all-target-headers.hmap -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-project-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources/i386 -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/../../../../Downloads/MobileAppTracking-ios -include /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch -MMD -MT dependencies -MF /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPParsingHelper.d --serialize-diagnostics /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPParsingHelper.dia -c /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPParsingHelper.m -o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPParsingHelper.o36"E54B1B86-DDEE-4064-86FD-0269B102E1D9-
+
+CCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouteRequest.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouteRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395767055.067632
+e395767055.123782
+r1
+xCompileC
+xbuild/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouteRequest.o
+x/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouteRequest.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouteRequest.md712120fed96b741^8ac91f0fed96b741^---0#0#0#-19%DVTDocumentLocation2@89"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouteRequest.m0000000000000000^3509"CompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouteRequest.o Turnpike/TPRouteRequest.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-generated-files.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-own-target-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-all-target-headers.hmap -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-project-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources/i386 -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/../../../../Downloads/MobileAppTracking-ios -include /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch -MMD -MT dependencies -MF /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouteRequest.d --serialize-diagnostics /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouteRequest.dia -c /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouteRequest.m -o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouteRequest.o36"85586671-35E6-4720-9D33-CD541B1E7CD5-
+
+CCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouter.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395767055.067529
+e395767055.151232
+r1
+xCompileC
+xbuild/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouter.o
+x/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouter.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouter.ma512120fed96b741^07b6260fed96b741^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouter.m0000000000000000^3473"CompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouter.o Turnpike/TPRouter.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-generated-files.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-own-target-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-all-target-headers.hmap -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-project-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources/i386 -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/../../../../Downloads/MobileAppTracking-ios -include /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch -MMD -MT dependencies -MF /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouter.d --serialize-diagnostics /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouter.dia -c /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouter.m -o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPRouter.o36"610AC834-CD9C-406E-9E1A-DDD3170B6A3E-
+
+CCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPURIHelper.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPURIHelper.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395767055.067547
+e395767055.143530
+r1
+xCompileC
+xbuild/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPURIHelper.o
+x/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPURIHelper.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection78"Compile /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPURIHelper.mb70a120fed96b741^dec8240fed96b741^---0#0#0#-19%DVTDocumentLocation2@86"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPURIHelper.m0000000000000000^3491"CompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPURIHelper.o Turnpike/TPURIHelper.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-generated-files.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-own-target-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-all-target-headers.hmap -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-project-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources/i386 -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/../../../../Downloads/MobileAppTracking-ios -include /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch -MMD -MT dependencies -MF /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPURIHelper.d --serialize-diagnostics /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPURIHelper.dia -c /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPURIHelper.m -o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/TPURIHelper.o36"E04A4643-7C3B-4692-8BE8-A7BF9E8E344C-
+
+CCompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/Turnpike.o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395767055.067520
+e395767055.124842
+r1
+xCompileC
+xbuild/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/Turnpike.o
+x/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+o/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.m:18:17: warning: incomplete implementation [-Wincomplete-implementation]
+o@implementation Turnpike
+o                ^
+o/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h:66:1: note: method definition for 'invokeURL:' not found
+o+ (void)invokeURL:(NSString *)url;
+o^
+o/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h:74:1: note: method definition for 'invokeAppWithSchema:Route:AndQueryParameters:' not found
+o+ (void)invokeAppWithSchema:(NSString *)schema Route:(NSString *)route AndQueryParameters:(NSDictionary *)queryParameters;
+o^
+o/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h:81:1: note: method definition for 'canInvokeURL:' not found
+o+ (BOOL)canInvokeURL:(NSString *)url;
+o^
+o/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h:83:1: note: method definition for 'canInvokeAppWithSchema:' not found
+o+ (BOOL)canInvokeAppWithSchema:(NSString *)schema;
+o^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.m950e120fed96b741^1ef91f0fed96b741^-1010"/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.m:18:17: warning: incomplete implementation [-Wincomplete-implementation]@implementation Turnpike                ^/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h:66:1: note: method definition for 'invokeURL:' not found+ (void)invokeURL:(NSString *)url;^/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h:74:1: note: method definition for 'invokeAppWithSchema:Route:AndQueryParameters:' not found+ (void)invokeAppWithSchema:(NSString *)schema Route:(NSString *)route AndQueryParameters:(NSDictionary *)queryParameters;^/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h:81:1: note: method definition for 'canInvokeURL:' not found+ (BOOL)canInvokeURL:(NSString *)url;^/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h:83:1: note: method definition for 'canInvokeAppWithSchema:' not found+ (BOOL)canInvokeAppWithSchema:(NSString *)schema;^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@25"Incomplete implementation-395767055#18446744073709551615#0#4(2@44"Method definition for 'invokeURL:' not found-395767055#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@83"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h0000000000000000^65#0#65#0#2787#0#14"Semantic Issue--2@79"Method definition for 'invokeAppWithSchema:Route:AndQueryParameters:' not found-395767055#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@83"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h0000000000000000^73#0#73#0#3157#0#14"Semantic Issue--2@47"Method definition for 'canInvokeURL:' not found-395767055#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@83"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h0000000000000000^80#0#80#0#3498#0#14"Semantic Issue--2@57"Method definition for 'canInvokeAppWithSchema:' not found-395767055#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@83"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h0000000000000000^82#0#82#0#3537#0#14"Semantic Issue--1#27"com.apple.dt.IDE.diagnostic3@83"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.m0000000000000000^17#16#17#16#251#0#14"Semantic Issue--0#0#0#-19%DVTDocumentLocation4@83"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.m0000000000000000^3473"CompileC build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/Turnpike.o Turnpike/Turnpike.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-generated-files.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-own-target-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-all-target-headers.hmap -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-project-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources/i386 -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/../../../../Downloads/MobileAppTracking-ios -include /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch -MMD -MT dependencies -MF /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/Turnpike.d --serialize-diagnostics /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/Turnpike.dia -c /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.m -o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/Turnpike.o36"C2AFD6C1-174B-48A9-BBAE-F99B3550EEB7-
+
+CLibtool /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/libTurnpike.a normal i386
+s395767055.213310
+e395767055.221131
+r1
+xLibtool
+x/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/libTurnpike.a
+xnormal
+xi386
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Libtool build/Release-iphonesimulator/libTurnpike.a normal i38647e9360fed96b741^e99b380fed96b741^-159"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC -0#0#0#--775"Libtool build/Release-iphonesimulator/libTurnpike.a normal i386    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    setenv IPHONEOS_DEPLOYMENT_TARGET 6.1    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator -filelist /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Objects-normal/i386/Turnpike.LinkFileList -ObjC -framework Foundation -o /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/libTurnpike.a36"132B1AF1-9D01-4B33-BC35-B70EA0211585-
+
+CPBXCp Turnpike/TPAnonymousFilter.h build/Release-iphonesimulator/include/Turnpike/TPAnonymousFilter.h
+s395764996.589072
+e395764996.592774
+r1
+xPBXCp
+xTurnpike/TPAnonymousFilter.h
+xbuild/Release-iphonesimulator/include/Turnpike/TPAnonymousFilter.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Copy build/Release-iphonesimulator/include/Turnpike/TPAnonymousFilter.hdb699704e596b741^b5c39704e596b741^---0#0#0#-19%DVTDocumentLocation2@130"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/TPAnonymousFilter.h000000000080d041^567"PBXCp Turnpike/TPAnonymousFilter.h build/Release-iphonesimulator/include/Turnpike/TPAnonymousFilter.h    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPAnonymousFilter.h /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike36"1AE86559-EB55-41B4-B47C-B56051E92052-
+
+CPBXCp Turnpike/TPFilterChain.h build/Release-iphonesimulator/include/Turnpike/TPFilterChain.h
+s395764996.589066
+e395764996.592539
+r1
+xPBXCp
+xTurnpike/TPFilterChain.h
+xbuild/Release-iphonesimulator/include/Turnpike/TPFilterChain.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Release-iphonesimulator/include/Turnpike/TPFilterChain.hf5679704e596b741^d5b49704e596b741^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/TPFilterChain.h000000000080d041^555"PBXCp Turnpike/TPFilterChain.h build/Release-iphonesimulator/include/Turnpike/TPFilterChain.h    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterChain.h /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike36"A68693B4-117E-4FDA-B246-A9873CF52E47-
+
+CPBXCp Turnpike/TPFilterProtocol.h build/Release-iphonesimulator/include/Turnpike/TPFilterProtocol.h
+s395764996.589040
+e395764996.592523
+r1
+xPBXCp
+xTurnpike/TPFilterProtocol.h
+xbuild/Release-iphonesimulator/include/Turnpike/TPFilterProtocol.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"Copy build/Release-iphonesimulator/include/Turnpike/TPFilterProtocol.he4679704e596b741^c8b39704e596b741^---0#0#0#-19%DVTDocumentLocation2@129"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/TPFilterProtocol.h000000000080d041^564"PBXCp Turnpike/TPFilterProtocol.h build/Release-iphonesimulator/include/Turnpike/TPFilterProtocol.h    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterProtocol.h /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike36"56EE7E80-8650-4E86-BA24-A3729B5F6491-
+
+CPBXCp Turnpike/TPHelper.h build/Release-iphonesimulator/include/Turnpike/TPHelper.h
+s395764996.589053
+e395764996.592955
+r1
+xPBXCp
+xTurnpike/TPHelper.h
+xbuild/Release-iphonesimulator/include/Turnpike/TPHelper.h
+
+CPBXCp Turnpike/TPRouteRequest.h build/Release-iphonesimulator/include/Turnpike/TPRouteRequest.h
+s395764996.589009
+e395764996.592631
+r1
+xPBXCp
+xTurnpike/TPRouteRequest.h
+xbuild/Release-iphonesimulator/include/Turnpike/TPRouteRequest.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Copy build/Release-iphonesimulator/include/Turnpike/TPRouteRequest.hb2679704e596b741^6bb99704e596b741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/TPRouteRequest.h000000000080d041^558"PBXCp Turnpike/TPRouteRequest.h build/Release-iphonesimulator/include/Turnpike/TPRouteRequest.h    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouteRequest.h /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike36"683E44E8-C42D-4405-B491-9599F2BB7438-
+
+CPBXCp Turnpike/TPRouter.h build/Release-iphonesimulator/include/Turnpike/TPRouter.h
+s395764996.588984
+e395764996.592498
+r1
+xPBXCp
+xTurnpike/TPRouter.h
+xbuild/Release-iphonesimulator/include/Turnpike/TPRouter.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/Release-iphonesimulator/include/Turnpike/TPRouter.had689704e596b741^afb19704e596b741^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/TPRouter.h000000000080d041^540"PBXCp Turnpike/TPRouter.h build/Release-iphonesimulator/include/Turnpike/TPRouter.h    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPRouter.h /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike36"21746F33-0C5F-48AE-9E8B-98B67C4A43A9-
+
+CPBXCp Turnpike/Turnpike.h build/Release-iphonesimulator/include/Turnpike/Turnpike.h
+s395767055.221343
+e395767055.223145
+r1
+xPBXCp
+xTurnpike/Turnpike.h
+xbuild/Release-iphonesimulator/include/Turnpike/Turnpike.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Copy build/Release-iphonesimulator/include/Turnpike/Turnpike.hb2f5380fed96b741^f71f390fed96b741^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike/Turnpike.h0000000000000000^540"PBXCp Turnpike/Turnpike.h build/Release-iphonesimulator/include/Turnpike/Turnpike.h    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike.h /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include/Turnpike36"8C115965-8BB9-4CBE-9C7A-DC71D300822C-
+
+CProcessPCH /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch.pth Turnpike/Turnpike-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s395767054.938002
+e395767055.067399
+r1
+xProcessPCH
+x/var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch.pth
+xTurnpike/Turnpike-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Precompile Turnpike/Turnpike-Prefix.pcha870f00eed96b741^3141110fed96b741^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike-Prefix.pch0000000000000000^3472"ProcessPCH /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch.pth Turnpike/Turnpike-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/jlturner/Desktop/Scratchpad/URX/Turnpike    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-generated-files.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-own-target-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-all-target-headers.hmap -iquote /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/Turnpike-project-headers.hmap -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources/i386 -I/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Turnpike.build/Release-iphonesimulator/Turnpike.build/DerivedSources -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/build/Release-iphonesimulator -F/Users/jlturner/Desktop/Scratchpad/URX/Turnpike/../../../../Downloads/MobileAppTracking-ios --serialize-diagnostics /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch.dia -c /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/Turnpike-Prefix.pch -o /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/qc/9wd6j7dn25n_0vw80ls28lm00000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Turnpike-Prefix-ffnutauiclkzsrfxvqaeealrrtfn/Turnpike-Prefix.pch.d36"69A1EDBA-925B-4978-B013-03145431717E-
+
