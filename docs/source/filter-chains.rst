@@ -1,8 +1,8 @@
-#######
-Filters
-#######
+#############
+Filter Chains
+#############
 
-``Turnpike``'s ``TPRouter`` internally keeps a list of filters, which you can append filters to, and which get invoked when a ``TPRouteRequest`` is created.
+Turnpike's ``TPRouter`` internally keeps a list of filters, which you can append filters to, and which get invoked when a ``TPRouteRequest`` is created.
  
 Filters allow you to perform logic with the incoming ``TPRouteRequest`` before the route's mapped callback is invoked. Filters can be used for authentication, redirecting, analytics, and more.
 

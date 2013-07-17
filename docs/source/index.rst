@@ -9,10 +9,10 @@
    :maxdepth: 1
 
    self
-   routing
-   filters
+   mapping-routes
+   filter-chains
    requests
-   resolution
+   resolving-routes
       
 
 .. raw:: html
@@ -32,17 +32,15 @@ Turnpike
 
 .. _o-main-functions:
 
-Core Responsibilities
----------------------
+Turnpike's Core Responsibilities
+--------------------------------
 
-Turnpike has four main functions:
-
-- **Mapping Routes**: To map callbacks to routes (either a defined route or a fallback "404" route).
-- **Filter Chains**: To hold a list of filters to perform as a filter chain on invoked routes.
-- **Invoking URLs & Routes**: To processes incoming routes and URLs with the router's defined routes and filter chains.
-- **Launching External Apps**: Helper methods to launch external apps, enabling the web of mobile apps.
+- :doc:`mapping-routes` either defined routes or a fallback ``404`` route.
+- :doc:`filter-chains` to decouple request processing from routing logic.
+- :doc:`resolving-routes` To processes incoming routes and URLs with the router's defined routes and filter chains.
  
-To resolve a deeplink URI, Turnpike does the following:
+Resolving Deeplink URI's
+------------------------
 
 - Searches for a matching defined route, and falls back on the default route if no match is found.
 - Applies each filter in the filter chain to the created ``TPRouteRequest`` object.
