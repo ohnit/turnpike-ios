@@ -49,16 +49,15 @@ Turnpike lets you map deeplink URI routes to in-app actions.
 
 .. code-block:: objc
 
-	TPRouter *router = [TPRouter router];
-	    [router mapRoute:@"product/:product_id" ToCallback:^(TPRouteRequest *request) {
-	        [Products displayProductWithId:[request.routeParameters valueForKey:@"product_id"]];
+  [Turnpike mapRoute:@"product/:product_id" ToDestination:^(TPRouteRequest *request) {
+      [Products displayProductWithId:[request.routeParameters valueForKey:@"product_id"]];
 	}];
 
 Turnpike allows the creation of filters to centralize the processing logic for incoming requests.
 
 .. code-block:: objc
 
-	[router addAnonymousFilter:^(TPRouteRequest *request, TPFilterChain *filterChain) {
+	[Turnpike appendAnonymousFilter:^(TPRouteRequest *request, TPFilterChain *filterChain) {
 	     NSLog(@"%@",request.matchedRoute);
 	     [filterChain.doFilterWithRequest:request];
 	}];
@@ -67,7 +66,7 @@ After filter processing, Turnpike resolves route requests to their final in-app 
 
 .. code-block:: objc
 
-	[router invokeInternalRoute:@"product/1988"]
+	[Turnpike resolveURL:[NSURL urlWithString:@"product/1988"]];
 
 .. _gs-first-steps:
 

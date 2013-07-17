@@ -18,7 +18,7 @@ To define a Default Route, use the method ``mapDefaultToDestination``.
 The Default Route is invoked when no route is matched. By default, this does nothing and just launches your app. 
 
 .. note:: 
-   The Default Route can be used for a default landing page, or to gracefully degrade to a fallback page for incoming URI's that don't match any know paths.
+   The Default Route can be used for a default landing page, or to gracefully degrade to a fallback page for incoming URI's that don't match any known paths.
  
 .. _mr-mapped-routes:
 
@@ -73,7 +73,7 @@ Suppose we want the links ``tab/travel`` and ``tab/food`` to open different UI t
 .. code-block:: objc
 
     self.tabBarController.selectedIndex = 1;
-    [Turnpike mapRoute:@"tab/:tab_name" ToCallback:^(TPRouteRequest *request) {
+    [Turnpike mapRoute:@"tab/:tab_name" ToDestination:^(TPRouteRequest *request) {
         int tabIndexToSet = [[request.routeParameters valueForKey:@"tab_name"] isEqualToString:@"Home"] ? 0 : 1;
         [[UIApplication sharedApplication].delegate window].rootViewController.tabBarController.selectedIndex = tabIndexToSet;
     }];

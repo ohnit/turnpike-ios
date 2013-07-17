@@ -13,8 +13,8 @@ Filters are processed sequentially in a :ref:`Filter Chain <fc-filter-chain>`. E
 
 Filters can either be added to the filter chain in one of two ways:
 
-- :ref:`Filters <fc-filters>` implementing ``TPFilterProtocol`` can be added using ``addFilter``. 
-- :ref:`Anonymous Filters <fc-anonymous-filters>` can be defined with a block and added using ``addAnonymousFilter``.
+- :ref:`Filters <fc-filters>` implementing ``TPFilterProtocol`` can be added using ``appendFilter``. 
+- :ref:`Anonymous Filters <fc-anonymous-filters>` can be defined with a block and added using ``appendAnonymousFilter``.
 
 .. _fc-filters:
 
