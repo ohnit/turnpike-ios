@@ -1,12 +1,23 @@
 .. title:: Mobile Deeplinks with Turnpike - Getting Started
 
+
+.. raw:: html
+
+   <div style="display:none;">
+
 .. toctree::
    :maxdepth: 1
 
+   self
    mapping-routes
    router
    route-request
    filter-chain
+
+.. raw:: html
+
+   </div>
+
 
 ##############################
 Mobile Deeplinks with Turnpike
