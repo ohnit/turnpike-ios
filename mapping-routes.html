@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mapping Routes to Callbacks | Turnpike</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
+    <link rel="stylesheet" href="_static/yammerdoc.css" type="text/css"/>
+    <link rel="top" title="Turnpike" href="index.html"/>
+    <link rel="next" title="Filter Chains" href="filter-chains.html"/>
+    <link rel="prev" title="Turnpike" href="index.html"/>
+    <style lang="text/css">
+        #top-bar, #top-bar small, #top-bar a {
+            text-shadow: 0px -1px 0px #182127;
+            color: #ffffff;
+        }
+        
+        #top-bar {
+            background-color: #363F45;
+            background-image: -moz-linear-gradient(top, #545d63, #182127);
+            background-image: -ms-linear-gradient(top, #545d63, #182127);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#545d63), to(#182127));
+            background-image: -webkit-linear-gradient(top, #545d63, #182127);
+            background-image: -o-linear-gradient(top, #545d63, #182127);
+            background-image: linear-gradient(top, #545d63, #182127);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#545d63', endColorstr = '#182127', GradientType = 0);
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+
+
+        .hero-unit {
+            background-image: url("_static/dropwizard-hat.png") !important;
+            background-repeat: no-repeat !important;
+            background-position: 30px 50px;
+        }
+
+        .hero-unit div.section {
+            padding-left: 150px !important;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://github.com/URXtech/Turnpike">
+        <img style="position: absolute; top: 0; right: 0; border: 0;"
+             src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
+             alt="Fork me on GitHub"></a>
+    <div class="navbar">
+        <div class="navbar-inner container-fluid" id="top-bar">
+            <header class="row-fluid">
+                <h1 class="span12" id="title"><img class="logo" src="_static/turnpike-logo.png" alt="Logo"/>
+                    <a href="index.html">Turnpike</a>
+                    <small>Structuring the web of mobile apps.</small>
+                </h1>
+            </header>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3" id="sidebar">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Turnpike</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Mapping Routes to Callbacks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#default-route">Default Route</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defined-routes">Defined Routes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#assigning-callbacks-to-routes">Assigning Callbacks to Routes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-dynamic-routes">Using Dynamic Routes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="filter-chains.html">Filter Chains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="requests.html">Route Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resolving-routes.html">Resolving Routes</a></li>
+</ul>
+
+                <hr/>
+            </div>
+            <div class="span9" id="body">
+                
+  <div class="section" id="mapping-routes-to-callbacks">
+<span id="mapping-routes"></span><h1>Mapping Routes to Callbacks</h1>
+<p>Turnpike can map both defined routes and a <a class="reference internal" href="#mr-default-route"><em>default route</em></a>.</p>
+<div class="section" id="default-route">
+<span id="mr-default-route"></span><h2>Default Route</h2>
+<p>The Default Route is invoked when no route is matched. By default, this does nothing and just launches your app.</p>
+<p>The Default Route is defined with the method <tt class="docutils literal"><span class="pre">+</span> <span class="pre">(void)mapDefaultToCallback:(TPRoutingCallback)callback</span></tt></p>
+</div>
+<div class="section" id="defined-routes">
+<span id="mr-defined-route"></span><h2>Defined Routes</h2>
+<p>Defined routes are written in &#8220;route format&#8221;, where route segments (constants, such as <tt class="docutils literal"><span class="pre">login</span></tt> or <tt class="docutils literal"><span class="pre">user</span></tt>) and route parameters (variables, such as <tt class="docutils literal"><span class="pre">:user_id</span></tt> or <tt class="docutils literal"><span class="pre">:page_number</span></tt>) are separated by the route separator, <tt class="docutils literal"><span class="pre">/</span></tt>.</p>
+<p>Defined routes can either be static, such as <tt class="docutils literal"><span class="pre">about/team</span></tt>, or can dynamic, such as <tt class="docutils literal"><span class="pre">user/:user_id/profile/:comment_id</span></tt>.</p>
+<div class="section" id="assigning-callbacks-to-routes">
+<span id="mr-assigning-callbacks"></span><h3>Assigning Callbacks to Routes</h3>
+<p>Defined routes are defined with the method <tt class="docutils literal"><span class="pre">+</span> <span class="pre">(void)mapRoute:(NSString</span> <span class="pre">*)format</span> <span class="pre">ToCallback:(TPRoutingCallback)callback</span></tt>.</p>
+<p id="mr-examples-product-page">For example, if a resolved deeplink should push a Product Page onto our UINavigation Controller, we might use a callback like this:</p>
+<div class="highlight-objc"><div class="highlight"><pre><span class="p">[</span><span class="n">Turnpike</span> <span class="n">mapRoute</span><span class="o">:</span><span class="s">@&quot;product/:product_id&quot;</span> <span class="n">ToCallback</span><span class="o">:^</span><span class="p">(</span><span class="n">TPRouteRequest</span> <span class="o">*</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">UINavigationController</span> <span class="o">*</span><span class="n">navigationController</span> <span class="o">=</span> <span class="p">(</span><span class="n">UINavigationController</span><span class="o">*</span><span class="p">)</span><span class="n">self</span><span class="p">.</span><span class="n">window</span><span class="p">.</span><span class="n">rootViewController</span><span class="p">;</span>
+    <span class="p">[</span><span class="n">navigationController</span> <span class="n">popToRootViewControllerAnimated</span><span class="o">:</span><span class="nb">NO</span><span class="p">];</span>
+
+    <span class="n">UIStoryboard</span> <span class="o">*</span><span class="n">storyboard</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIStoryboard</span> <span class="n">storyboardWithName</span><span class="o">:</span><span class="s">@&quot;MainStoryboard&quot;</span> <span class="n">bundle</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+    <span class="n">ProductViewController</span> <span class="o">*</span><span class="n">productViewController</span> <span class="o">=</span> <span class="p">[</span><span class="n">storyboard</span> <span class="n">instantiateViewControllerWithIdentifier</span><span class="o">:</span><span class="s">@&quot;ProductViewController&quot;</span><span class="p">];</span>
+
+    <span class="p">[</span><span class="n">navigationController</span> <span class="n">pushViewController</span><span class="o">:</span><span class="n">productViewController</span> <span class="n">animated</span><span class="o">:</span><span class="nb">NO</span><span class="p">];</span>
+<span class="p">}];</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-dynamic-routes">
+<span id="id1"></span><h3>Using Dynamic Routes</h3>
+<p>In the case of dynamic routes, route parameters can be accessed in the filter or callback through the <tt class="docutils literal"><span class="pre">TPRouteRequest</span></tt>, by calling <tt class="docutils literal"><span class="pre">request.routeParameters</span></tt>. The route <tt class="docutils literal"><span class="pre">user/:user_id</span></tt> invoked as <tt class="docutils literal"><span class="pre">user/32</span></tt> would have the route parameter <tt class="docutils literal"><span class="pre">:user_id</span></tt> accessible in the <tt class="docutils literal"><span class="pre">TPRouteRequest</span></tt> by calling <tt class="docutils literal"><span class="pre">[request.routeParameters</span> <span class="pre">valueForKey:&#64;&quot;user_id&quot;]</span></tt> which gets the value of <tt class="docutils literal"><span class="pre">user_id</span></tt> from the <tt class="docutils literal"><span class="pre">NSDictionary</span></tt> <tt class="docutils literal"><span class="pre">routeParameters</span></tt> (which would return the <tt class="docutils literal"><span class="pre">NSString</span></tt> of <tt class="docutils literal"><span class="pre">32</span></tt>).</p>
+<p>Suppose we want the links <tt class="docutils literal"><span class="pre">tab/travel</span></tt> and <tt class="docutils literal"><span class="pre">tab/food</span></tt> to open different UI tabs. Using route param parsing, we can map the route <tt class="docutils literal"><span class="pre">tab/:tab_name</span></tt> to a callback that uses the <tt class="docutils literal"><span class="pre">:tab_name</span></tt> value to focus the appropriate UI element.</p>
+<div class="highlight-objc" id="mr-examples-switch-to-a-tab"><div class="highlight"><pre><span class="n">self</span><span class="p">.</span><span class="n">tabBarController</span><span class="p">.</span><span class="n">selectedIndex</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">[</span><span class="n">Turnpike</span> <span class="n">mapRoute</span><span class="o">:</span><span class="s">@&quot;tab/:tab_name&quot;</span> <span class="n">ToCallback</span><span class="o">:^</span><span class="p">(</span><span class="n">TPRouteRequest</span> <span class="o">*</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">tabIndexToSet</span> <span class="o">=</span> <span class="p">[[</span><span class="n">request</span><span class="p">.</span><span class="n">routeParameters</span> <span class="n">valueForKey</span><span class="o">:</span><span class="s">@&quot;tab_name&quot;</span><span class="p">]</span> <span class="n">isEqualToString</span><span class="o">:</span><span class="s">@&quot;Home&quot;</span><span class="p">]</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">[[</span><span class="n">UIApplication</span> <span class="n">sharedApplication</span><span class="p">].</span><span class="n">delegate</span> <span class="n">window</span><span class="p">].</span><span class="n">rootViewController</span><span class="p">.</span><span class="n">tabBarController</span><span class="p">.</span><span class="n">selectedIndex</span> <span class="o">=</span> <span class="n">tabIndexToSet</span><span class="p">;</span>
+<span class="p">}];</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+            </div>
+        </div>
+        <hr/>
+        <footer>
+            &copy; Copyright 2013, URX.
+            Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>
+            1.2b1.
+        </footer>
+    </div>
+</body>
+</html>
+
+
