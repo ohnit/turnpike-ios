@@ -105,6 +105,12 @@
 		ACFED1BA178734D600AD1920 /* TPFilterChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPFilterChain.m; sourceTree = "<group>"; };
 		ACFED1BC178740BE00AD1920 /* TPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPHelper.h; sourceTree = "<group>"; };
 		ACFED1BD178740BE00AD1920 /* TPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPHelper.m; sourceTree = "<group>"; };
+		B4BF5DF11794C0E700C9726F /* Turnpike.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Turnpike.md; path = docs/Turnpike.md; sourceTree = "<group>"; };
+		B4BF5DF31794C3F400C9726F /* TPRouter.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TPRouter.md; path = docs/TPRouter.md; sourceTree = "<group>"; };
+		B4BF5DF41794C46900C9726F /* TPRouteRequest.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TPRouteRequest.md; path = docs/TPRouteRequest.md; sourceTree = "<group>"; };
+		B4BF5DF51794C51800C9726F /* TPFilter.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TPFilter.md; path = docs/TPFilter.md; sourceTree = "<group>"; };
+		B4BF5DF61794C5D800C9726F /* TPAnonymousFilter.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TPAnonymousFilter.md; path = docs/TPAnonymousFilter.md; sourceTree = "<group>"; };
+		B4BF5DFE1794C6AC00C9726F /* TPFilterChain.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TPFilterChain.md; path = docs/TPFilterChain.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,7 @@
 		ACFED1781787304800AD1920 = {
 			isa = PBXGroup;
 			children = (
+				B4BF5DEF1794C00D00C9726F /* docs */,
 				ACFED1861787304800AD1920 /* Turnpike */,
 				ACFED19B1787304800AD1920 /* TurnpikeTests */,
 				ACFED1831787304800AD1920 /* Frameworks */,
@@ -235,6 +242,19 @@
 				AC1E86951795C050006D3839 /* TPURIHelper.m */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		B4BF5DEF1794C00D00C9726F /* docs */ = {
+			isa = PBXGroup;
+			children = (
+				B4BF5DFE1794C6AC00C9726F /* TPFilterChain.md */,
+				B4BF5DF61794C5D800C9726F /* TPAnonymousFilter.md */,
+				B4BF5DF51794C51800C9726F /* TPFilter.md */,
+				B4BF5DF41794C46900C9726F /* TPRouteRequest.md */,
+				B4BF5DF31794C3F400C9726F /* TPRouter.md */,
+				B4BF5DF11794C0E700C9726F /* Turnpike.md */,
+			);
+			name = docs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
