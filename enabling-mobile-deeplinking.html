@@ -4,10 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Search | Turnpike</title>
+    <title>Enabling Mobile Deeplinking | Turnpike</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
     <link rel="stylesheet" href="_static/yammerdoc.css" type="text/css"/>
     <link rel="top" title="Turnpike" href="index.html"/>
+    <link rel="next" title="Mapping Routes to Destinations" href="mapping-routes.html"/>
+    <link rel="prev" title="Installation" href="installation.html"/>
     <style lang="text/css">
         #top-bar, #top-bar small, #top-bar a {
             text-shadow: 0px -1px 0px #182127;
@@ -58,10 +60,14 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="span3" id="sidebar">
-                <ul>
+                <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="enabling-mobile-deeplinking.html">Enabling Mobile Deeplinking</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Enabling Mobile Deeplinking</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#custom-url-schemes">Custom URL Schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#implementing-handleopenurl">Implementing handleOpenURL</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="mapping-routes.html">Mapping Routes to Destinations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="route-requests.html">Route Requests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filter-chains.html">Filters &amp; Filter Chains</a></li>
@@ -71,29 +77,24 @@
             </div>
             <div class="span9" id="body">
                 
-  <h1 id="search-documentation">Search</h1>
-  <div id="fallback" class="admonition warning">
-  <script type="text/javascript">$('#fallback').hide();</script>
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  <p>
-    From here you can search these documents. Enter your search
-    words into the box below and click "search". Note that the search
-    function will automatically search for all of the words. Pages
-    containing fewer words won't appear in the result list.
-  </p>
-  <form action="" method="get">
-    <input type="text" name="q" value="" />
-    <input type="submit" value="search" />
-    <span id="search-progress" style="padding-left: 10px"></span>
-  </form>
-  
-  <div id="search-results">
-  
-  </div>
+  <div class="section" id="enabling-mobile-deeplinking">
+<span id="id1"></span><h1>Enabling Mobile Deeplinking</h1>
+<div class="section" id="custom-url-schemes">
+<h2>Custom URL Schemes</h2>
+<p>To register a URL schema, add the CFBundleURLTypes key to your app’s Info.plist file. CFBundleURLTypes contains an array of dictionaries, each of which defines a URL scheme the app supports. Each dictionary within the array is a key / value pair of CFBundleURLName (string) and CFBundleURLSchemes (array of strings).</p>
+<p>The CFBundleURLName should be, according to Apple, in reverse dns format (<tt class="docutils literal"><span class="pre">com.myCompany.myProduct</span></tt>).</p>
+<p>The CFBundleURLSchemes is an array of custom URL schemas you want your app to respond to. You can add as many as you like, but you only need one.</p>
+</div>
+<div class="section" id="implementing-handleopenurl">
+<h2>Implementing handleOpenURL</h2>
+<p>In the your&#8217;s App Delegate, you must implement the optional App Delegate method that allow your app to perform deeplinking. This method is:</p>
+<div class="highlight-objc"><div class="highlight"><pre><span class="k">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="n">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">openURL:</span><span class="p">(</span><span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">sourceApplication:</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sourceApplication</span> <span class="nf">annotation:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">annotation</span>
+</pre></div>
+</div>
+<p>In your implementation of this method, you should resolve the incoming url your router. If you&#8217;re using Turnpike&#8217;s shared router (which is all that&#8217;s needed in most cases), simply call <tt class="docutils literal"><span class="pre">[Turnpike</span> <span class="pre">resolveURL:url]</span></tt>. If you&#8217;re using multiple routers, you can instead call <tt class="docutils literal"><span class="pre">[router</span> <span class="pre">resolveURL:url]</span></tt>.</p>
+</div>
+</div>
+
 
             </div>
         </div>

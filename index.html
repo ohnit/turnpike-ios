@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
     <link rel="stylesheet" href="_static/yammerdoc.css" type="text/css"/>
     <link rel="top" title="Turnpike" href="#"/>
-    <link rel="next" title="Mapping Routes to Callbacks" href="mapping-routes.html"/>
+    <link rel="next" title="Installation" href="installation.html"/>
     <style lang="text/css">
         #top-bar, #top-bar small, #top-bar a {
             text-shadow: 0px -1px 0px #182127;
@@ -31,7 +31,7 @@
 
 
         .hero-unit {
-            background-image: url("_static/dropwizard-hat.png") !important;
+            background-image: url("_static/turnpike-logo.png") !important;
             background-repeat: no-repeat !important;
             background-position: 30px 50px;
         }
@@ -42,7 +42,7 @@
     </style>
 </head>
 <body>
-    <a href="https://github.com/URXtech/Turnpike">
+    <a href="https://github.com/URXtech/turnpike-ios">
         <img style="position: absolute; top: 0; right: 0; border: 0;"
              src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
              alt="Fork me on GitHub"></a>
@@ -60,11 +60,12 @@
         <div class="row-fluid">
             <div class="span3" id="sidebar">
                 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Turnpike</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapping-routes.html">Mapping Routes to Callbacks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="filter-chains.html">Filter Chains</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requests.html">Route Requests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resolving-routes.html">Resolving Routes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enabling-mobile-deeplinking.html">Enabling Mobile Deeplinking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping-routes.html">Mapping Routes to Destinations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="route-requests.html">Route Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter-chains.html">Filters &amp; Filter Chains</a></li>
 </ul>
 
                 <hr/>
@@ -73,47 +74,63 @@
                 
   <div style="display:none;"><div class="toctree-wrapper compound">
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Turnpike</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mapping-routes.html">Mapping Routes to Callbacks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="filter-chains.html">Filter Chains</a></li>
-<li class="toctree-l1"><a class="reference internal" href="requests.html">Route Requests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resolving-routes.html">Resolving Routes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="enabling-mobile-deeplinking.html">Enabling Mobile Deeplinking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping-routes.html">Mapping Routes to Destinations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="route-requests.html">Route Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter-chains.html">Filters &amp; Filter Chains</a></li>
 </ul>
 </div>
-</div><div class="section" id="turnpike">
-<h1>Turnpike</h1>
-<p class="rubric">Developed by <a class="reference external" href="http://www.urx.com/">URX</a> to enable mobile deeplinking in apps.</p>
+</div><div class="section" id="getting-started">
+<h1>Getting Started</h1>
+<p class="rubric">Turnpike was developed by <a class="reference external" href="http://www.urx.com/">URX</a> to enable mobile deeplinking in apps.</p>
 <div class="section" id="turnpike-s-core-responsibilities">
-<span id="o-main-functions"></span><h2>Turnpike&#8217;s Core Responsibilities</h2>
+<span id="gs-core-responsibilities"></span><h2>Turnpike&#8217;s Core Responsibilities</h2>
 <ul class="simple">
-<li><a class="reference internal" href="mapping-routes.html"><em>Mapping Routes to Callbacks</em></a> either defined routes or a fallback <tt class="docutils literal"><span class="pre">404</span></tt> route.</li>
-<li><a class="reference internal" href="filter-chains.html"><em>Filter Chains</em></a> to decouple request processing from routing logic.</li>
-<li><a class="reference internal" href="resolving-routes.html"><em>Resolving Routes</em></a> To processes incoming routes and URLs with the router&#8217;s defined routes and filter chains.</li>
+<li><a class="reference internal" href="mapping-routes.html"><em>Mapping Routes to Destinations</em></a> either defined routes or a default / <tt class="docutils literal"><span class="pre">404</span> <span class="pre">not</span> <span class="pre">found</span></tt> route</li>
+<li><a class="reference internal" href="route-requests.html"><em>Route Requests</em></a> provide a consistent representation for processing incoming routes and URLs</li>
+<li><a class="reference internal" href="filter-chains.html"><em>Filters &amp; Filter Chains</em></a> to decouple request processing from routing logic</li>
 </ul>
 </div>
-<div class="section" id="resolving-deeplink-uri-s">
-<h2>Resolving Deeplink URI&#8217;s</h2>
+<div class="section" id="mobile-deeplinking-with-turnpike">
+<h2>Mobile Deeplinking with Turnpike</h2>
+<p>Turnpike lets you map deeplink URI routes to in-app actions.</p>
+<div class="highlight-objc"><div class="highlight"><pre><span class="p">[</span><span class="n">Turnpike</span> <span class="n">mapRoute</span><span class="o">:</span><span class="s">@&quot;product/:product_id&quot;</span> <span class="n">ToDestination</span><span class="o">:^</span><span class="p">(</span><span class="n">TPRouteRequest</span> <span class="o">*</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">[</span><span class="n">Products</span> <span class="n">displayProductWithId</span><span class="o">:</span><span class="p">[</span><span class="n">request</span><span class="p">.</span><span class="n">routeParameters</span> <span class="n">valueForKey</span><span class="o">:</span><span class="s">@&quot;product_id&quot;</span><span class="p">]];</span>
+      <span class="p">}];</span>
+</pre></div>
+</div>
+<p>Turnpike allows the creation of filters to centralize the processing logic for incoming requests.</p>
+<div class="highlight-objc"><div class="highlight"><pre><span class="p">[</span><span class="n">Turnpike</span> <span class="n">appendAnonymousFilter</span><span class="o">:^</span><span class="p">(</span><span class="n">TPRouteRequest</span> <span class="o">*</span><span class="n">request</span><span class="p">,</span> <span class="n">TPFilterChain</span> <span class="o">*</span><span class="n">filterChain</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span><span class="n">request</span><span class="p">.</span><span class="n">matchedRoute</span><span class="p">);</span>
+     <span class="p">[</span><span class="n">filterChain</span><span class="p">.</span><span class="n">doFilterWithRequest</span><span class="o">:</span><span class="n">request</span><span class="p">];</span>
+<span class="p">}];</span>
+</pre></div>
+</div>
+<p>After filter processing, Turnpike resolves route requests to their final in-app destinations.</p>
+<div class="highlight-objc"><div class="highlight"><pre><span class="p">[</span><span class="n">Turnpike</span> <span class="n">resolveURL</span><span class="o">:</span><span class="p">[</span><span class="n">NSURL</span> <span class="n">urlWithString</span><span class="o">:</span><span class="s">@&quot;product/1988&quot;</span><span class="p">]];</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="first-steps-with-turnpike">
+<span id="gs-first-steps"></span><h2>First Steps with Turnpike</h2>
+<p>The Turnpike SDK can be included in your iOS app in one of two ways:</p>
+<ul class="simple">
+<li><a class="reference internal" href="installation.html#i-with-pods"><em>Cocoapods Dependency</em></a></li>
+<li><a class="reference internal" href="installation.html#i-without-pods"><em>Downloadable Binary</em></a></li>
+</ul>
+<p>The next step is to <a class="reference internal" href="enabling-mobile-deeplinking.html"><em>enable deeplinking within your app</em></a>, and integrate Turnpike at the deeplink entry point.</p>
+<p>Next, feel free to read on below about Turnpike&#8217;s capabilities!</p>
+</div>
+<div class="section" id="turnpike-request-lifecycle">
+<span id="gs-request-lifecycle"></span><h2>Turnpike Request Lifecycle</h2>
+<p>When resolving deeplink URI&#8217;s, Turnpike takes the following steps:</p>
 <ul class="simple">
 <li>Searches for a matching defined route, and falls back on the default route if no match is found.</li>
 <li>Applies each filter in the filter chain to the created <tt class="docutils literal"><span class="pre">TPRouteRequest</span></tt> object.</li>
 <li>Invokes the callback associated with the matched (or default) route.</li>
 </ul>
-</div>
-<div class="section" id="brief-example">
-<h2>Brief Example</h2>
-<div class="highlight-objc"><div class="highlight"><pre><span class="n">TPRouter</span> <span class="o">*</span><span class="n">router</span> <span class="o">=</span> <span class="p">[</span><span class="n">TPRouter</span> <span class="n">router</span><span class="p">];</span>
-    <span class="p">[</span><span class="n">router</span> <span class="n">mapRoute</span><span class="o">:</span><span class="s">@&quot;product/:product_id&quot;</span> <span class="n">ToCallback</span><span class="o">:^</span><span class="p">(</span><span class="n">TPRouteRequest</span> <span class="o">*</span><span class="n">request</span><span class="p">)</span> <span class="p">{</span>
-        <span class="p">[</span><span class="n">Products</span> <span class="n">displayProductWithId</span><span class="o">:</span><span class="p">[</span><span class="n">request</span><span class="p">.</span><span class="n">routeParameters</span> <span class="n">valueForKey</span><span class="o">:</span><span class="s">@&quot;product_id&quot;</span><span class="p">]];</span>
-<span class="p">}];</span>
-
-<span class="p">[</span><span class="n">router</span> <span class="n">addAnonymousFilter</span><span class="o">:^</span><span class="p">(</span><span class="n">TPRouteRequest</span> <span class="o">*</span><span class="n">request</span><span class="p">,</span> <span class="n">TPFilterChain</span> <span class="o">*</span><span class="n">filterChain</span><span class="p">)</span> <span class="p">{</span>
-     <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;%@&quot;</span><span class="p">,</span><span class="n">request</span><span class="p">.</span><span class="n">matchedRoute</span><span class="p">);</span>
-     <span class="p">[</span><span class="n">filterChain</span><span class="p">.</span><span class="n">doFilterWithRequest</span><span class="o">:</span><span class="n">request</span><span class="p">];</span>
-<span class="p">}];</span>
-
-<span class="p">[</span><span class="n">router</span> <span class="n">invokeInternalRoute</span><span class="o">:</span><span class="s">@&quot;product/1988&quot;</span><span class="p">]</span>
-</pre></div>
-</div>
 </div>
 </div>
 

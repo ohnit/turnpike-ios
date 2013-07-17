@@ -9,10 +9,11 @@
    :maxdepth: 1
 
    self
+   installation
+   enabling-mobile-deeplinking
    mapping-routes
+   route-requests
    filter-chains
-   requests
-   resolving-routes
       
 
 .. raw:: html
@@ -20,47 +21,77 @@
    </div>
 
 
-########
-Turnpike
-########
+###############
+Getting Started
+###############
 
 .. highlight:: text
 
-.. rubric:: Developed by URX__ to enable mobile deeplinking in apps.
+.. rubric:: Turnpike was developed by URX__ to enable mobile deeplinking in apps.
 
 .. __: http://www.urx.com/
 
-.. _o-main-functions:
+.. _gs-core-responsibilities:
 
+********************************
 Turnpike's Core Responsibilities
---------------------------------
+********************************
 
-- :doc:`mapping-routes` either defined routes or a fallback ``404`` route.
-- :doc:`filter-chains` to decouple request processing from routing logic.
-- :doc:`resolving-routes` To processes incoming routes and URLs with the router's defined routes and filter chains.
- 
-Resolving Deeplink URI's
-------------------------
+- :doc:`mapping-routes` either defined routes or a default / ``404 not found`` route
+- :doc:`route-requests` provide a consistent representation for processing incoming routes and URLs
+- :doc:`filter-chains` to decouple request processing from routing logic
+
+********************************
+Mobile Deeplinking with Turnpike
+********************************
+
+Turnpike lets you map deeplink URI routes to in-app actions.
+
+.. code-block:: objc
+
+  [Turnpike mapRoute:@"product/:product_id" ToDestination:^(TPRouteRequest *request) {
+      [Products displayProductWithId:[request.routeParameters valueForKey:@"product_id"]];
+	}];
+
+Turnpike allows the creation of filters to centralize the processing logic for incoming requests.
+
+.. code-block:: objc
+
+	[Turnpike appendAnonymousFilter:^(TPRouteRequest *request, TPFilterChain *filterChain) {
+	     NSLog(@"%@",request.matchedRoute);
+	     [filterChain.doFilterWithRequest:request];
+	}];
+
+After filter processing, Turnpike resolves route requests to their final in-app destinations.
+
+.. code-block:: objc
+
+	[Turnpike resolveURL:[NSURL urlWithString:@"product/1988"]];
+
+.. _gs-first-steps:
+
+*************************
+First Steps with Turnpike
+*************************	
+
+The Turnpike SDK can be included in your iOS app in one of two ways:
+
+- :ref:`Cocoapods Dependency <i-with-pods>`
+- :ref:`Downloadable Binary <i-without-pods>`
+
+The next step is to :doc:`enable deeplinking within your app <enabling-mobile-deeplinking>`, and integrate Turnpike at the deeplink entry point. 
+
+Next, feel free to read on below about Turnpike's capabilities!
+
+.. _gs-request-lifecycle:
+
+**************************
+Turnpike Request Lifecycle
+**************************
+
+When resolving deeplink URI's, Turnpike takes the following steps:
 
 - Searches for a matching defined route, and falls back on the default route if no match is found.
 - Applies each filter in the filter chain to the created ``TPRouteRequest`` object.
 - Invokes the callback associated with the matched (or default) route.
-
-Brief Example
--------------
-
-.. code-block:: objc
-
-	TPRouter *router = [TPRouter router];
-	    [router mapRoute:@"product/:product_id" ToCallback:^(TPRouteRequest *request) {
-	        [Products displayProductWithId:[request.routeParameters valueForKey:@"product_id"]];
-	}];
- 
-	[router addAnonymousFilter:^(TPRouteRequest *request, TPFilterChain *filterChain) {
-	     NSLog(@"%@",request.matchedRoute);
-	     [filterChain.doFilterWithRequest:request];
-	}];
- 
-	[router invokeInternalRoute:@"product/1988"]
-
 

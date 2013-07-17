@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Installation | Turnpike</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
+    <link rel="stylesheet" href="_static/yammerdoc.css" type="text/css"/>
+    <link rel="top" title="Turnpike" href="index.html"/>
+    <link rel="next" title="Enabling Mobile Deeplinking" href="enabling-mobile-deeplinking.html"/>
+    <link rel="prev" title="Getting Started" href="index.html"/>
+    <style lang="text/css">
+        #top-bar, #top-bar small, #top-bar a {
+            text-shadow: 0px -1px 0px #182127;
+            color: #ffffff;
+        }
+        
+        #top-bar {
+            background-color: #363F45;
+            background-image: -moz-linear-gradient(top, #545d63, #182127);
+            background-image: -ms-linear-gradient(top, #545d63, #182127);
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#545d63), to(#182127));
+            background-image: -webkit-linear-gradient(top, #545d63, #182127);
+            background-image: -o-linear-gradient(top, #545d63, #182127);
+            background-image: linear-gradient(top, #545d63, #182127);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#545d63', endColorstr = '#182127', GradientType = 0);
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0;
+        }
+
+
+        .hero-unit {
+            background-image: url("_static/turnpike-logo.png") !important;
+            background-repeat: no-repeat !important;
+            background-position: 30px 50px;
+        }
+
+        .hero-unit div.section {
+            padding-left: 150px !important;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://github.com/URXtech/turnpike-ios">
+        <img style="position: absolute; top: 0; right: 0; border: 0;"
+             src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"
+             alt="Fork me on GitHub"></a>
+    <div class="navbar">
+        <div class="navbar-inner container-fluid" id="top-bar">
+            <header class="row-fluid">
+                <h1 class="span12" id="title"><img class="logo" src="_static/turnpike-logo.png" alt="Logo"/>
+                    <a href="index.html">Turnpike</a>
+                    <small>Structuring the web of mobile apps.</small>
+                </h1>
+            </header>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span3" id="sidebar">
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#installation-without-cocoapods">Installation Without CocoaPods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#download-turnpike-binary-and-headers">Download Turnpike Binary and Headers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#load-the-binary-and-headers-into-your-app">Load the binary and headers into your app</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#import-turnpike">Import Turnpike</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installation-using-cocoapods">Installation Using CocoaPods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-cocoapods">Install CocoaPods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-podfile">Create a Podfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-the-pod">Install the pod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#open-your-workspace">Open your workspace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Import Turnpike</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="enabling-mobile-deeplinking.html">Enabling Mobile Deeplinking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mapping-routes.html">Mapping Routes to Destinations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="route-requests.html">Route Requests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filter-chains.html">Filters &amp; Filter Chains</a></li>
+</ul>
+
+                <hr/>
+            </div>
+            <div class="span9" id="body">
+                
+  <div class="section" id="installation">
+<span id="id1"></span><h1>Installation</h1>
+<hr class="docutils" />
+<div class="section" id="installation-without-cocoapods">
+<span id="i-without-pods"></span><h2>Installation Without CocoaPods</h2>
+<div class="section" id="download-turnpike-binary-and-headers">
+<h3>Download Turnpike Binary and Headers</h3>
+<p>Download and extract the Turnpike library binary and header files.</p>
+</div>
+<div class="section" id="load-the-binary-and-headers-into-your-app">
+<h3>Load the binary and headers into your app</h3>
+<p>Drag and drop the libTurnpike.a and Headers folder into your Xcode projects. When it prompts you for choosing actions upon import, make sure that &#8220;Copy items into destination group&#8217;s folder (if needed)&#8221; is checked and that the binary is being added to your build target.</p>
+</div>
+<div class="section" id="import-turnpike">
+<h3>Import Turnpike</h3>
+<p>You can now use Turnpike in your app by importing it:</p>
+<div class="highlight-objc"><div class="highlight"><pre><span class="cp">#import &quot;Turnpike.h&quot;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="installation-using-cocoapods">
+<span id="i-with-pods"></span><h2>Installation Using CocoaPods</h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">(Pod info coming soon, pending Pod submission)</p>
+</div>
+<div class="section" id="install-cocoapods">
+<h3>Install CocoaPods</h3>
+<p>Open up your Terminal and type:</p>
+<div class="highlight-objc"><pre>$ gem install cocoapods
+$ pod setup</pre>
+</div>
+<p>Now CocoaPods should be installed.</p>
+</div>
+<div class="section" id="create-a-podfile">
+<h3>Create a Podfile</h3>
+<p>If you don&#8217;t already have one, you&#8217;ll need a Podfile to specify and install CocoaPods libraries in your app.</p>
+<p>In your Xcode project directory, create a text file named <tt class="docutils literal"><span class="pre">Podfile</span></tt>  with the contents:</p>
+<div class="highlight-objc"><pre>platform :ios
+pod 'Turnpike', '~&gt;1.0'</pre>
+</div>
+</div>
+<div class="section" id="install-the-pod">
+<h3>Install the pod</h3>
+<p>To install your pods, run from the Terminal:</p>
+<div class="highlight-objc"><pre>$ pod install</pre>
+</div>
+</div>
+<div class="section" id="open-your-workspace">
+<h3>Open your workspace</h3>
+<p>Your project using CocoaPods must be opened as a workspace, not a project. To do this explicity from the Terminal, run:</p>
+<div class="highlight-objc"><pre>$ open MyAwesomeApp.xcworkspace</pre>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Import Turnpike</h3>
+<p>You can now use Turnpike in your app by importing it:</p>
+<div class="highlight-objc"><div class="highlight"><pre><span class="cp">#import &lt;Turnpike.h&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+            </div>
+        </div>
+        <hr/>
+        <footer>
+            &copy; Copyright 2013, URX.
+            Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>
+            1.2b1.
+        </footer>
+    </div>
+</body>
+</html>
+
+
