@@ -15,8 +15,10 @@ Developed by URX__ to enable mobile deeplinking on iOS and Android platforms.
 .. toctree::
    :maxdepth: 1
 
-   overview
+   getting-started
+   router
    route-request
+   filter-chain
 
 .. raw:: html
 
