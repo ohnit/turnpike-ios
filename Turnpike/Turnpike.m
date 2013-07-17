@@ -40,31 +40,11 @@
 }
 
 + (void)addAnonymousFilter:(TPFilterBlock)filterBlock {
-    [[self sharedRouter] addAnonymousFilter:filterBlock];
-}
-
-+ (void)invokeInternalRoute:(NSString *)route {
-    [[self sharedRouter] invokeInternalRoute:route];
+    [[self sharedRouter] appendAnonymousFilter:filterBlock];
 }
 
 + (void)resolveURL:(NSURL *)url {
     [[self sharedRouter] resolveURL:url];
-}
-
-+ (void)invokeURL:(NSURL *)url {
-    [TPHelper invokeExternalURL:url];
-}
-
-+ (void)invokeExternalAppWithSchema:(NSString *)schema Route:(NSString *)route AndQueryParameters:(NSDictionary *)queryParameters {
-    [TPHelper invokeExternalAppWithSchema:schema Route:route AndQueryParameters:queryParameters];
-}
-
-+ (BOOL)canInvokeURL:(NSURL *)url {
-    return [TPHelper canInvokeExternalURL:url];
-}
-
-+ (BOOL)canInvokeAppWithSchema:(NSString *)schema {
-    
 }
 
 @end
