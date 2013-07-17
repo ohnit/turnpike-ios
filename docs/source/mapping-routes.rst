@@ -4,7 +4,9 @@
 Mapping Routes
 ##############
  
-**Turnpike** can map both defined routes and a default route.
+Turnpike can map both defined routes and a default route.
+
+.. _mr-default-route:
 
 Default Route
 =============
@@ -12,6 +14,8 @@ Default Route
 The Default Route is invoked when no route is matched. By default, this does nothing and just launches your app.
  
 The Default Route is defined with the method ``+ (void)mapDefaultToCallback:(TPRoutingCallback)callback``
+
+.. _mr-defined-route:
 
 Defined Routes
 ==============

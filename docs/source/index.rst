@@ -10,9 +10,9 @@
 
    self
    mapping-routes
+   filters
    router
-   route-request
-   filter-chain
+   requests   
 
 .. raw:: html
 
@@ -47,52 +47,6 @@ To resolve a deeplink URI, Turnpike does the following:
 - Applies each filter in the filter chain to the created ``TPRouteRequest`` object.
 - Invokes the callback associated with the matched (or default) route.
 
-.. _filter-chains:
-
-Filter Chains
-=============
- 
-``Turnpike``'s ``TPRouter`` internally keeps a list of filters, which you can append filters to, and which get invoked when a ``TPRouteRequest`` is created.
- 
-Filters allow you to perform logic with the incoming ``TPRouteRequest`` before the route's mapped callback is invoked. Filters can be used for authentication, redirecting, analytics, and more.
- 
-Filters are used in a filter chain, and are executed sequentially. The sequence is defined by the order in which filters are added to the router (the first filter added is the first execute, the last is the last executed).
-
-Filters can either be added with the method ``+ (void)addFilter:(id <TPFilterProtocol>)filter``, or they can be defined with a block and added with the method ``+ (void)addAnonymousFilter:(TPFilterBlock)filterBlock``.
-
-.. _examples-adding-a-filter:
-
-Example: Adding a Filter
-------------------------
-
-.. code-block:: objc
-
-    [Turnpike addAnonymousFilter:^(TPRouteRequest *request, TPFilterChain *filterChain) {
-        NSLog(@"Matched Route: %@",request.matchedRoute);
-     
-        [filterChain.doFilterWithRequest:request];
-    }];
-
- 
-Filters themselves are objects that respond to ``TPFilterProtocol``, and as such implement ``- (void) doFilterWithRequest:(TPRouteRequest *)request AndFilterChain:(TPFilterChain *)filterChain``. This is the method that is used to process a ``TPRouteRequest``. In this method, the Filter should call either ``[filterChain.doFilterWithRequest:request]`` to continue the route, or invoke another route from the router to "redirect". If the filter chain is not continued, it is forgotten and is ended.
-
-.. _examples-performing-a-redirect:
-
-Performing a Redirect with a Filter
-----------------------------------------
-
-.. code-block:: objc
-
-    [Turnpike addAnonymousFilter:^(TPRouteRequest *request, TPFilterChain *filterChain) {
-        if([Sweepstakes hasPlayed] == NO && arc4random() % 1000 == 0) {
-            [Turnpike invokeInternalRoute:@"sweepstakes/win"];
-        }
-        else {
-            [filterChain.doFilterWithRequest:request];
-        }
-        [Sweepstakes setHasPlayed:YES];
-    }];
-
 .. _invoking-urls-and-routes:
 
 Invoking URLs & Routes
@@ -105,7 +59,7 @@ Routes can either be invoked internally, as a route, or externally, as a URL. In
 Invoking Routes Internally
 --------------------------
 
-.. code-block:: objc
+.. code-block: objc
 
     [Turnpike invokeInternalRoute:@"about/team"];
  
@@ -125,7 +79,7 @@ Launching External Apps
 Invoking External Routes
 ------------------------
 
-.. code-block:: objc
+.. code-block: objc
 
     - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
         [Turnpike invokeExternalRouteFromURL:url];
