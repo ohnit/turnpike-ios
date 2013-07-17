@@ -39,12 +39,12 @@
  Add a filter to the filter chain.
  @param filter An object that responds to `<TPFilterProtocol>`. If you would rather use a block than create a new class, use `addNewAnonymousFilter:` instead.
  */
-+ (void)addFilter:(id <TPFilterProtocol>)filter;
++ (void)applyFilter:(id <TPFilterProtocol>)filter;
 /**
  Add an anonymous filter to the filter chain.
  @param filterBlock a `TPFilterBlock`. If you would rather create a new class than use a block, use `addFilter:` instead.
  */
-+ (void)addAnonymousFilter:(TPFilterBlock)filterBlock;
++ (void)applyAnonymousFilter:(TPFilterBlock)filterBlock;
 
 ///-------------------------------
 /// @name Invoking URLs & Routes
