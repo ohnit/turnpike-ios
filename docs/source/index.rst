@@ -27,23 +27,25 @@ Getting Started
 
 .. highlight:: text
 
-.. rubric:: Developed by URX__ to enable mobile deeplinking in apps.
+.. rubric:: Turnpike was developed by URX__ to enable mobile deeplinking in apps.
 
 .. __: http://www.urx.com/
 
-.. _o-main-functions:
+.. _gs-core-responsibilities:
 
+********************************
 Turnpike's Core Responsibilities
---------------------------------
+********************************
 
-- :doc:`mapping-routes` either defined routes or a fallback ``404`` route
+- :doc:`mapping-routes` either defined routes or a default / ``404 not found`` route
 - :doc:`route-requests` provide a consistent representation for processing incoming routes and URLs
 - :doc:`filter-chains` to decouple request processing from routing logic
 
-Brief Example
-=============
+********************************
+Mobile Deeplinking with Turnpike
+********************************
 
-Defining routes:
+Turnpike lets you map deeplink URI routes to in-app actions.
 
 .. code-block:: objc
 
@@ -52,7 +54,7 @@ Defining routes:
 	        [Products displayProductWithId:[request.routeParameters valueForKey:@"product_id"]];
 	}];
 
-Adding filters:
+Turnpike allows the creation of filters to centralize the processing logic for incoming requests.
 
 .. code-block:: objc
 
@@ -61,14 +63,32 @@ Adding filters:
 	     [filterChain.doFilterWithRequest:request];
 	}];
 
-Resolving route requests:
+After filter processing, Turnpike resolves route requests to their final in-app destinations.
 
 .. code-block:: objc
 
 	[router invokeInternalRoute:@"product/1988"]
 
+.. _gs-first-steps:
+
+*************************
+First Steps with Turnpike
+*************************	
+
+The Turnpike SDK can be included in your iOS app in one of two ways:
+
+- :ref:`Cocoapods Dependency <i-with-pods>`
+- :ref:`Downloadable Binary <i-without-pods>`
+
+The next step is to :doc:`enable deeplinking within your app <enabling-mobile-deeplinking>`, and integrate Turnpike at the deeplink entry point. 
+
+Next, feel free to read on below about Turnpike's capabilities!
+
+.. _gs-request-lifecycle:
+
+**************************
 Turnpike Request Lifecycle
-==========================
+**************************
 
 When resolving deeplink URI's, Turnpike takes the following steps:
 
