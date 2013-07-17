@@ -25,13 +25,13 @@ The ``routeParameters`` is an ``NSDictionary`` of route parameters found in the 
 Example Usage
 =============
 
-.. codeblock:: objc
+.. codeblock: objc
 
 	if(request.queryParameters && [request.queryParameters valueForKey:@"coupon_id"]) {
 	    [CouponProcessor validateAndProcessCoupon:[request.queryParameters valueForKey:@"coupon_id"]];
 	}
 
-.. codeblock:: objc
+.. codeblock: objc
 
 	if(request.matchedRoute) {
 	    [MyAwesomeLoggingService logRoute:request.matchedRoute WithParameters:request.routeParameters];

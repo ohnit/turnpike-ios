@@ -4,7 +4,7 @@ Anonymous Filters
 
 The ``TPAnonymousFilter`` is an object which responds to the ``TPFilterProtocol``, and which lets the user of this object define the behavior of the filter through a block.
 
-``TPAnonymousFilter``s are useful when making a filter to handle internal logic, where as creating your own class is useful when creating redistributable classes. The main advantage of ``TPAnonymousFilter``s is being able to avoid the boilerplate required for creating a new class.
+``TPAnonymousFilter`` s are useful when making a filter to handle internal logic, where as creating your own class is useful when creating redistributable classes. The main advantage of ``TPAnonymousFilter`` s is being able to avoid the boilerplate required for creating a new class.
 
 How To Use Anonymous Filter
 ===========================
