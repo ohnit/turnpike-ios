@@ -5,6 +5,4 @@ dependencies: \
   /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPAnonymousFilter.h \
   /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterProtocol.h \
   /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPFilterChain.h \
-  /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPHelper.h \
-  /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPParsingHelper.h \
-  /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPURIHelper.h
+  /Users/jlturner/Desktop/Scratchpad/URX/Turnpike/Turnpike/TPHelper.h
