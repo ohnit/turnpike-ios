@@ -9,6 +9,8 @@
 #import "TPRouter.h"
 #import "TPFilterChain.h"
 #import "TPHelper.h"
+#import "TPParsingHelper.h"
+#import "TPURIHelper.h"
 
 @interface TPRouter()
 
@@ -167,7 +169,10 @@
 #pragma mark Invoking URLs & Routes
 
 - (void)resolveURL:(NSURL *)url {
-    
+    NSURL *sanitizedURL = [TPURIHelper sanitizeURL:url];
+    NSString *sanitizedPath = sanitizedURL.path ? sanitizedURL.path : @"";
+    NSString *rawRoute = sanitizedURL.host ? ([sanitizedURL.host stringByAppendingString:sanitizedPath]) : sanitizedPath;
+    [self invokeRoute:[TPParsingHelper sanitizeMappedPath:rawRoute] WithSchema:sanitizedURL.scheme AndQueryParameters:[TPURIHelper queryStringToMap:sanitizedURL.query]];
 }
 
 @end

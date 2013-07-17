@@ -35,7 +35,6 @@
 		ACFED18A1787304800AD1920 /* Turnpike.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACFED1891787304800AD1920 /* Turnpike.h */; };
 		ACFED18C1787304800AD1920 /* Turnpike.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFED18B1787304800AD1920 /* Turnpike.m */; };
 		ACFED1941787304800AD1920 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFED1931787304800AD1920 /* SenTestingKit.framework */; };
-		ACFED1961787304800AD1920 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFED1951787304800AD1920 /* UIKit.framework */; };
 		ACFED1971787304800AD1920 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFED1841787304800AD1920 /* Foundation.framework */; };
 		ACFED19A1787304800AD1920 /* libTurnpike.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFED1811787304800AD1920 /* libTurnpike.a */; };
 		ACFED1A01787304800AD1920 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACFED19E1787304800AD1920 /* InfoPlist.strings */; };
@@ -92,7 +91,6 @@
 		ACFED18B1787304800AD1920 /* Turnpike.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Turnpike.m; sourceTree = "<group>"; };
 		ACFED1921787304800AD1920 /* TurnpikeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurnpikeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFED1931787304800AD1920 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		ACFED1951787304800AD1920 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		ACFED19D1787304800AD1920 /* TurnpikeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TurnpikeTests-Info.plist"; sourceTree = "<group>"; };
 		ACFED19F1787304800AD1920 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ACFED1A11787304800AD1920 /* TurnpikeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TurnpikeTests.h; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACFED1941787304800AD1920 /* SenTestingKit.framework in Frameworks */,
-				ACFED1961787304800AD1920 /* UIKit.framework in Frameworks */,
 				ACFED1971787304800AD1920 /* Foundation.framework in Frameworks */,
 				ACFED19A1787304800AD1920 /* libTurnpike.a in Frameworks */,
 			);
@@ -164,7 +161,6 @@
 			children = (
 				ACFED1841787304800AD1920 /* Foundation.framework */,
 				ACFED1931787304800AD1920 /* SenTestingKit.framework */,
-				ACFED1951787304800AD1920 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -197,9 +193,9 @@
 				ACFED1A21787304800AD1920 /* TurnpikeTests.m */,
 				AC1E86971795D68F006D3839 /* ParsingHelperTests.h */,
 				AC1E86981795D68F006D3839 /* ParsingHelperTests.m */,
-				ACFED19C1787304800AD1920 /* Supporting Files */,
 				AC63021C1796B92F00609666 /* URIHelperTests.h */,
 				AC63021D1796B92F00609666 /* URIHelperTests.m */,
+				ACFED19C1787304800AD1920 /* Supporting Files */,
 			);
 			path = TurnpikeTests;
 			sourceTree = "<group>";
@@ -352,7 +348,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "XCODEBUILD_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin\nXCODEBUILD=$XCODEBUILD_PATH/xcodebuild\n\n$XCODEBUILD -project Turnpike.xcodeproj -target \"Turnpike\" -sdk \"iphonesimulator\" -configuration \"Release\" clean build\n$XCODEBUILD -project Turnpike.xcodeproj -target \"Turnpike\" -sdk \"iphoneos\" -configuration \"Release\" clean build\n\nlipo -create -output \"build/libturnpike.a\" \"build/Release-iphoneos/libTurnpike.a\" \"build/Release-iphonesimulator/libTurnpike.a\"\n";
+			shellScript = "XCODEBUILD_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin\nXCODEBUILD=$XCODEBUILD_PATH/xcodebuild\n\n$XCODEBUILD -project Turnpike.xcodeproj -target \"Turnpike\" -sdk \"iphonesimulator\" -configuration \"Release\" clean build\n$XCODEBUILD -project Turnpike.xcodeproj -target \"Turnpike\" -sdk \"iphoneos\" -configuration \"Release\" clean build\n\nlipo -create -output \"build/libTurnpike.a\" \"build/Release-iphoneos/libTurnpike.a\" \"build/Release-iphonesimulator/libTurnpike.a\"\n";
 		};
 		ACFED1901787304800AD1920 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -479,6 +475,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
