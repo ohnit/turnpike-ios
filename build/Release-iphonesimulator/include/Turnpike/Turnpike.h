@@ -39,12 +39,12 @@
  Add a filter to the filter chain.
  @param filter An object that responds to `<TPFilterProtocol>`. If you would rather use a block than create a new class, use `addNewAnonymousFilter:` instead.
  */
-+ (void)addFilter:(id <TPFilterProtocol>)filter;
++ (void)applyFilter:(id <TPFilterProtocol>)filter;
 /**
  Add an anonymous filter to the filter chain.
  @param filterBlock a `TPFilterBlock`. If you would rather create a new class than use a block, use `addFilter:` instead.
  */
-+ (void)addAnonymousFilter:(TPFilterBlock)filterBlock;
++ (void)applyAnonymousFilter:(TPFilterBlock)filterBlock;
 
 ///-------------------------------
 /// @name Invoking URLs & Routes
@@ -55,31 +55,5 @@
  @param url The URL to invoke, as a [URL encoded string in a proper URL format](http://www.ietf.org/rfc/rfc1738.txt "RFC 1738") (i.e. `com.mycompany.MyApp:logout`, `com.mycompany.MyApp:users/16?highlight=portfolio`, `com.mycompany.MyApp:about/team/contact?city=san%20francisco`).
  */
 + (void)resolveURL:(NSURL *)url;
-
-///-------------------------------
-/// @name Launching External Apps
-///-------------------------------
-/**
- A convenience method for opening a URL using `UIApplication` `openURL:`.
- @param url The URL the OS will open (i.e. "http://google.com" for a web link or "myapp:someitem/something" for an app deep link)
- */
-+ (void)invokeURL:(NSString *)url;
-
-/**
- A convenience method for opening a URL using `UIApplication` `openURL:` with deep link specific parameters.
- @param schema The custom schema of the app you're trying to open.
- @param route The route of the app you're trying to open.
- @param queryParameters The query parameters you wish to send to the app as a query string.
- */
-+ (void)invokeAppWithSchema:(NSString *)schema Route:(NSString *)route AndQueryParameters:(NSDictionary *)queryParameters;
-
-/**
- A convenience method for opening a URL using `UIApplication` `canOpenURL:`.
- @param url The URL to try and open.
- @return If no apps respond to the URL, this will return `NO`, otherwise it will return `YES`.
- */
-+ (BOOL)canInvokeURL:(NSString *)url;
-
-+ (BOOL)canInvokeAppWithSchema:(NSString *)schema;
 
 @end
