@@ -6,20 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		ACF217A8178F9117004A9DF7 /* TurnpikeAggregate */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = ACF217A9178F9117004A9DF7 /* Build configuration list for PBXAggregateTarget "TurnpikeAggregate" */;
-			buildPhases = (
-				ACF217AC178F911E004A9DF7 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = TurnpikeAggregate;
-			productName = TurnpikeAggregate;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		AC1E86931795B178006D3839 /* TPParsingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1E86921795B178006D3839 /* TPParsingHelper.m */; };
 		AC1E86961795C050006D3839 /* TPURIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1E86951795C050006D3839 /* TPURIHelper.m */; };
@@ -320,7 +306,6 @@
 			targets = (
 				ACFED1801787304800AD1920 /* Turnpike */,
 				ACFED1911787304800AD1920 /* TurnpikeTests */,
-				ACF217A8178F9117004A9DF7 /* TurnpikeAggregate */,
 			);
 		};
 /* End PBXProject section */
@@ -337,19 +322,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		ACF217AC178F911E004A9DF7 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "XCODEBUILD_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin\nXCODEBUILD=$XCODEBUILD_PATH/xcodebuild\n\n$XCODEBUILD -project Turnpike.xcodeproj -target \"Turnpike\" -sdk \"iphonesimulator\" -configuration \"Release\" clean build\n$XCODEBUILD -project Turnpike.xcodeproj -target \"Turnpike\" -sdk \"iphoneos\" -configuration \"Release\" clean build\n\nlipo -create -output \"build/libTurnpike.a\" \"build/Release-iphoneos/libTurnpike.a\" \"build/Release-iphonesimulator/libTurnpike.a\"\n";
-		};
 		ACFED1901787304800AD1920 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,20 +385,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		ACF217AA178F9117004A9DF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		ACF217AB178F9117004A9DF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		ACFED1A41787304800AD1920 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -563,15 +521,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ACF217A9178F9117004A9DF7 /* Build configuration list for PBXAggregateTarget "TurnpikeAggregate" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ACF217AA178F9117004A9DF7 /* Debug */,
-				ACF217AB178F9117004A9DF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		ACFED17C1787304800AD1920 /* Build configuration list for PBXProject "Turnpike" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
