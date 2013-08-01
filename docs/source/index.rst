@@ -74,10 +74,7 @@ After filter processing, Turnpike resolves route requests to their final in-app 
 First Steps with Turnpike
 *************************	
 
-The Turnpike SDK can be included in your iOS app in one of two ways:
-
-- :ref:`Cocoapods Dependency <i-with-pods>`
-- :ref:`Downloadable Binary <i-without-pods>`
+The Turnpike SDK can be obtained via GitHub, and we recommend keeping Turnpike updated via Git.
 
 The next step is to :doc:`enable deeplinking within your app <enabling-mobile-deeplinking>`, and integrate Turnpike at the deeplink entry point. 
 
