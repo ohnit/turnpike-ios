@@ -67,7 +67,14 @@
         }
     }
     // If we found a schema, lets strip it from the resource path
-    if(schema != nil) resourcePath = [resourcePath substringFromIndex:([schema length] + 1)];
+    if(schema != nil) {
+        if (resourcePath.length == schema.length) {
+            resourcePath = @"";
+        }
+        else {
+            resourcePath = [resourcePath substringFromIndex:[schema length]];
+        }
+    }
     
     // Strip out any leading slashes, if any, from the resource path
     while (resourcePath.length > 0 && [resourcePath characterAtIndex:0] == '/') {
@@ -85,10 +92,10 @@
     [LEADING_SLASHES replaceMatchesInString:sanitizedResourcePath options:0 range:NSMakeRange(0, sanitizedResourcePath.length) withTemplate:SINGLE_SLASH];
     
     
-    NSString *sanitizedURLString = [NSString stringWithFormat:@"%@%@%@",
-                                    (schema != nil ? [schema stringByAppendingString:@":"]:@""),
+    NSString *sanitizedURLString = [NSString stringWithFormat:@"%@//%@%@",
+                                    (schema != nil ? schema:@":"),
                                     [sanitizedResourcePath copy],
-                                    (queryString != nil ? [@"?" stringByAppendingString:queryString] : @"")];
+                                    (queryString != nil && queryString.length > 0 ? [@"?" stringByAppendingString:queryString] : @"")];
     return [NSURL URLWithString:sanitizedURLString];
 }
 
@@ -109,6 +116,10 @@
     }
     // Return an immutable copy of our parameters
     return [queryParameters copy];
+}
+
++ (NSString *)safeSchemeFromURL:(NSURL *)url {
+    return url.scheme && url.scheme.length > 0 ? url.scheme : nil;
 }
 
 @end

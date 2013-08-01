@@ -13,5 +13,6 @@
 + (NSURL *)sanitizeURL:(NSURL *)url;
 + (NSURL *)sanitizeString:(NSString *)inputString;
 + (NSDictionary *)queryStringToMap:(NSString *)queryString;
++ (NSString *)safeSchemeFromURL:(NSURL *)url;
 
 @end

@@ -170,9 +170,10 @@
 
 - (void)resolveURL:(NSURL *)url {
     NSURL *sanitizedURL = [TPURIHelper sanitizeURL:url];
+    NSString *scheme = [TPURIHelper safeSchemeFromURL:url];
     NSString *sanitizedPath = sanitizedURL.path ? sanitizedURL.path : @"";
     NSString *rawRoute = sanitizedURL.host ? ([sanitizedURL.host stringByAppendingString:sanitizedPath]) : sanitizedPath;
-    [self invokeRoute:[TPParsingHelper sanitizeMappedPath:rawRoute] WithSchema:sanitizedURL.scheme AndQueryParameters:[TPURIHelper queryStringToMap:sanitizedURL.query]];
+    [self invokeRoute:[TPParsingHelper sanitizeMappedPath:rawRoute] WithSchema:scheme AndQueryParameters:[TPURIHelper queryStringToMap:sanitizedURL.query]];
 }
 
 @end

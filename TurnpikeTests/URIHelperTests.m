@@ -13,14 +13,15 @@
 
 -(void) assertString:(NSString *)inputString EqualsScheme:(NSString *)scheme Path:(NSString *)path AndQuery:(NSString *)query {
     NSURL *outputURL = [TPURIHelper sanitizeString:inputString];
+    NSString *outputScheme = [TPURIHelper safeSchemeFromURL:outputURL];
     
-    STAssertEqualObjects(scheme,outputURL.scheme, @"should be equal to the test scheme");
+    STAssertEqualObjects(scheme,outputScheme, @"should be equal to the test scheme");
     STAssertEqualObjects(path, outputURL.path, @"should be equal to the test path");
     STAssertEqualObjects(query, outputURL.query, @"should be equal to the test query");
 }
 
 -(void) testSanitizeStringWithEmptyRootPath {
-    [self assertString:@"" EqualsScheme:nil Path:nil AndQuery:@""];
+    [self assertString:@"" EqualsScheme:nil Path:nil AndQuery:nil];
 }
 
 @end
