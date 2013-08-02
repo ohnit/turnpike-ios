@@ -252,7 +252,7 @@ Bonus Step: Keeping Up-To-Date with URX Turnpike
 
 Updating Turnpike is easy! Just open up your console, navigate to your
 Turnpike directory, then run ``git pull origin master`` and the newest
-version should come straight from GitHub.
+version will update straight from GitHub.
 
 .. figure:: images/installation/14.png
    :alt: Updating From GitHub
