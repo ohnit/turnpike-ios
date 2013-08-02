@@ -112,14 +112,14 @@ where all my dependencies will live. However if you have a single code
 base for multiple apps, you may want to have all of your apps in the
 same Workspace. I only have one, so this will be <tt class="docutils literal"><span class="pre">TestAppWorkspace</span></tt>.</p>
 <div class="figure">
-<img alt="Create Workspace folder" src="static/1.png" />
+<img alt="Create Workspace folder" src="images/1.png" />
 <p class="caption">Create Workspace folder</p>
 </div>
 <p>In Xcode, Go to File-&gt;New-&gt;Workspace, or press Control + Command + N, to
 create a new Workspace, and save it in the folder we just created with
 the name of your Workspace.</p>
 <div class="figure">
-<img alt="Create Workspace" src="static/2.png" />
+<img alt="Create Workspace" src="images/2.png" />
 <p class="caption">Create Workspace</p>
 </div>
 <p>Now that you have a Workspace, we need to put some projects into it!
@@ -128,7 +128,7 @@ Lets start with your existing project.</p>
 folder into the Workspace folder, just to keep the organization cleaner
 and not have your Workspace&#8217;s managed projects all over the place</p>
 <div class="figure">
-<img alt="Move project to workspace folder" src="static/3.png" />
+<img alt="Move project to workspace folder" src="images/3.png" />
 <p class="caption">Move project to workspace folder</p>
 </div>
 <p>Go to File-&gt;New-&gt;Add Files to &#8220;TestAppWorkspace&#8221; (where
@@ -137,7 +137,7 @@ and you&#8217;ll be able to select files. Navigate to your App&#8217;s
 <tt class="docutils literal"><span class="pre">.xcodeproj</span></tt> file and select that. Make sure &#8220;Copy items into
 destination group&#8217;s folder (if needed)&#8221; is checked, and click add.</p>
 <div class="figure">
-<img alt="Add project to Workspace in Xcode" src="static/4.png" />
+<img alt="Add project to Workspace in Xcode" src="images/4.png" />
 <p class="caption">Add project to Workspace in Xcode</p>
 </div>
 </div>
@@ -151,7 +151,7 @@ Workspace Folder.</p>
 <p><strong>Note: If you have already cloned a version of Turnpike, skip to the
 last step on maintenance to update it before continuing.</strong></p>
 <div class="figure">
-<img alt="Add project to Workspace in Xcode" src="static/5.png" />
+<img alt="Add project to Workspace in Xcode" src="images/5.png" />
 <p class="caption">Clone Turnpike</p>
 </div>
 <p>Next we need to add the Turnpike project as we did for our own App, so
@@ -160,7 +160,7 @@ in Xcode, go to File-&gt;New-&gt;Add Files to &#8220;TestAppWorkspace&#8221; (wh
 and this time select <tt class="docutils literal"><span class="pre">Turnpike.xcodeproj</span></tt> in the <tt class="docutils literal"><span class="pre">turnpike-ios</span></tt>
 folder.</p>
 <div class="figure">
-<img alt="Add Turnpike to Workspace" src="static/6.png" />
+<img alt="Add Turnpike to Workspace" src="images/6.png" />
 <p class="caption">Add Turnpike to Workspace</p>
 </div>
 </div>
@@ -175,7 +175,7 @@ from it, as evidenced by expanding the Products group in the Turnpike
 project, and seeing that <tt class="docutils literal"><span class="pre">libTurnpike.a</span></tt> is red, meaning Xcode can&#8217;t
 find it.</p>
 <div class="figure">
-<img alt="Test Turnpike" src="static/7.png" />
+<img alt="Test Turnpike" src="images/7.png" />
 <p class="caption">Test Turnpike</p>
 </div>
 <p>With static libraries, like Turnpike, tests can only be performed on the
@@ -200,14 +200,14 @@ to bring up a box with little + and - buttons. Hit the + button and type
 <tt class="docutils literal"><span class="pre">../turnpike-ios/Turnpike</span></tt> (assuming your project is in the Workspace
 directory, as it should be if you followed along).</p>
 <div class="figure">
-<img alt="Link to Turnpike Headers" src="static/8.png" />
+<img alt="Link to Turnpike Headers" src="images/8.png" />
 <p class="caption">Link to Turnpike Headers</p>
 </div>
 <p>Next, in your project settings, select your &#8220;Target&#8221;, and select the
 &#8220;Build Phases&#8221; tab. In your &#8220;Link Binary With Libraries&#8221; phase, hit the
 + button and select <tt class="docutils literal"><span class="pre">libTurnpike.a</span></tt> from the list (under Workspace).</p>
 <div class="figure">
-<img alt="Link to static library" src="static/9.png" />
+<img alt="Link to static library" src="images/9.png" />
 <p class="caption">Link to static library</p>
 </div>
 </div>
@@ -234,7 +234,7 @@ you register one in the reverse domain name style and use that one for
 creating deep links. This will prevent any non-malicious collisions, and
 is what we recommend as best practice.</strong></p>
 <div class="figure">
-<img alt="Create URL Schema" src="static/10.png" />
+<img alt="Create URL Schema" src="images/10.png" />
 <p class="caption">Create URL Schema</p>
 </div>
 </div>
@@ -271,7 +271,7 @@ both.</strong></p>
 <p>In your <tt class="docutils literal"><span class="pre">openURL</span></tt> method, all you need to add is
 <tt class="docutils literal"><span class="pre">[Turnpike</span> <span class="pre">resolveURL:url];</span></tt> and return <tt class="docutils literal"><span class="pre">YES</span></tt>.</p>
 <div class="figure">
-<img alt="Setting up your App Delegate" src="static/11.png" />
+<img alt="Setting up your App Delegate" src="images/11.png" />
 <p class="caption">Setting up your App Delegate</p>
 </div>
 <p>Congratulations, you have now added Deeplinking to your app!</p>
@@ -282,7 +282,7 @@ both.</strong></p>
 the simulator or your device. Go to Safari and enter your URL Schema +
 &#8221;:hello&#8221; and hit &#8220;Go&#8221;. For my app this is &#8220;<tt class="docutils literal"><span class="pre">com.urx.TestApp:hello</span></tt>&#8221;.</p>
 <div class="figure">
-<img alt="Deeplinking from Mobile Safari" src="static/12.png" />
+<img alt="Deeplinking from Mobile Safari" src="images/12.png" />
 <p class="caption">Deeplinking from Mobile Safari</p>
 </div>
 <p><strong>Note: this could also be com.urx.TestApp://hello,
@@ -293,7 +293,7 @@ hello.</strong></p>
 should see hello world. Congratulations, you&#8217;ve integrated URX Turnpike!
 Time for cookies!</p>
 <div class="figure">
-<img alt="Hello World" src="static/13.png" />
+<img alt="Hello World" src="images/13.png" />
 <p class="caption">Hello World</p>
 </div>
 </div>
@@ -303,7 +303,7 @@ Time for cookies!</p>
 Turnpike directory, then run <tt class="docutils literal"><span class="pre">git</span> <span class="pre">pull</span> <span class="pre">origin</span> <span class="pre">master</span></tt> and the newest
 version will update straight from GitHub.</p>
 <div class="figure">
-<img alt="Updating From GitHub" src="static/14.png" />
+<img alt="Updating From GitHub" src="images/14.png" />
 <p class="caption">Updating from GitHub</p>
 </div>
 <p>After updating, make sure to re-build your Turnpike binary in Xcode.
