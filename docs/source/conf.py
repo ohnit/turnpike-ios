@@ -104,7 +104,7 @@ html_theme_options = {
     'gradient_bg': u'#363F45',
     'landing_logo': u'turnpike-logo.png',
     'landing_logo_width': u'150px',
-    'github_page': u'https://github.com/URXtech/turnpike-ios'
+    'github_page': u'https://github.com/URXtech/turnpike-ios',
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
