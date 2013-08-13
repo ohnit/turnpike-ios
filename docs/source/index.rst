@@ -91,4 +91,3 @@ When resolving deeplink URI's, Turnpike takes the following steps:
 - Searches for a matching defined route, and falls back on the default route if no match is found.
 - Applies each filter in the filter chain to the created ``TPRouteRequest`` object.
 - Invokes the callback associated with the matched (or default) route.
-
