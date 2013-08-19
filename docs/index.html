@@ -701,9 +701,28 @@ img {
 #toc {
   margin: 0 0 200px 0;
 }
+@media (max-width: 400px) {
+  .container {
+    padding: 20px;
+  }
+  #logo a {
+    padding: 0 20px;
+  }
+}
 @media (max-width: 1005px) {
   #toc {
     display: none;
+  }
+  .col-lg-8 {
+    padding: 0 0 0 5%;
+  }
+  #nav {
+    display: none;
+  }
+}
+@media (max-width: 1215px) {
+  .col-lg-8 {
+    padding: 0 0 0 5%;
   }
 }
 #toc .active a {
@@ -718,6 +737,7 @@ img[src="source/images/installation/12.png"] {
 }
 </style>
     <script src="source/bootstrap.min.js" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   </head>
   <script>
    $(function() {
@@ -774,7 +794,7 @@ img[src="source/images/installation/12.png"] {
         <div class="col-lg-4 col-0"> 
           <div id="toc"></div>
         </div>
-        <div class="col-lg-8 col-12"><div style="display:none;">
+        <div class="col-lg-8 col-md-12"><div style="display:none;">
 </div>
 <h1>Getting Started</h1>
 <p><strong>Turnpike was developed by <a href="http://www.urx.com/">URX</a> to enable mobile deeplinking in apps.</strong></p>
