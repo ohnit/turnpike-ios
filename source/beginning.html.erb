@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="source/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="source/jquery.tocify.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="source/jquery.tocify.css">
+    <link rel="stylesheet" type="text/css" href="source/bootstrap.min.css">
+    <style type="text/css"><%= @css_data %></style>
+    <script src="source/bootstrap.min.js" type="text/javascript"></script>
+  </head>
+  <script>
+   $(function() {
+        //Calls the tocify method on your HTML div.
+        $("#toc").tocify({
+          context: 'body',
+          scrollTo: 90,
+          extendPage: false,
+          selectors: "h1",
+          scrollOfset: 50
+        });
+        $(window).scroll(function(){
+          if($(window).scrollTop() > 120){
+            $('#toc').addClass('affix');
+          }
+          if($(window).scrollTop() < 120) {
+            $('#toc').removeClass('affix');
+          }
+        });
+    });
+  </script>
+  <body>
+    <header id="header">
+      <div class="nav-wrapper">
+        <hgroup id="logo">
+          <a>
+          <h1></h1>
+<!--             <h1>
+              <span class="hide">
+                URX Retargeting Mobile Advertising Platform
+              </span>
+            </h1> -->
+          </a>
+        </hgroup>
+        <nav id="nav">
+          <span class="nav-inner">
+              <a id="advertisers-link" class="nav-link resize-hide" href="http://urx.com/#advertiser-section-link" target="_blank">Advertisers</a>
+              <a id="developers-link" class="nav-link resize-hide" href="http://urx.com/#developer-section-link" target="_blank">Developers</a>
+              <a href="http://vimeo.com/70526489" target="_blank" id="urx-video" class="nav-link resize-hide">URX Video</a>
+              <a class="nav-link resize-hide" href="http://blog.urx.com/" target="_blank">Blog</a>
+              <a href="http://urx.com/users/sign_up" target="_blank" class="nav-link btn btn-primary button-signup">Sign Up Today</a>
+              <a href="http://urx.com/users/sign_in" target="_blank" class="nav-link">Login</a>
+          </span>
+        </nav>
+      </div>
+    </header>    
+
+    <div class="container mt-4">
+      <div class="breaker-bottom">
+        <h1 class="headline">Turnpike IOS Documentation</h1>
+      </div>
+      <div class="row pt-2">
+        <div class="col-lg-4 col-0"> 
+          <div id="toc"></div>
+        </div>
+        <div class="col-lg-8 col-12">
