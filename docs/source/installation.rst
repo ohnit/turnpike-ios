@@ -1,5 +1,8 @@
+
+
+##############################
 Installation
-=========================================================
+##############################
 
 This installation tutorial will show you how to add URX Turnpike to your existing
 project, and how to keep it up-to-date.
@@ -32,7 +35,7 @@ where all my dependencies will live. However if you have a single code
 base for multiple apps, you may want to have all of your apps in the
 same Workspace. I only have one, so this will be ``TestAppWorkspace``.
 
-.. figure:: images/installation/1.png
+.. figure:: source/images/installation/1.png
    :alt: Create Workspace folder
 
    Create Workspace folder
@@ -40,7 +43,7 @@ In Xcode, Go to File->New->Workspace, or press Control + Command + N, to
 create a new Workspace, and save it in the folder we just created with
 the name of your Workspace.
 
-.. figure:: images/installation/2.png
+.. figure:: source/images/installation/2.png
    :alt: Create Workspace
 
    Create Workspace
@@ -51,7 +54,7 @@ Before we add it to the Workspace in Xcode, let's move the project
 folder into the Workspace folder, just to keep the organization cleaner
 and not have your Workspace's managed projects all over the place
 
-.. figure:: images/installation/3.png
+.. figure:: source/images/installation/3.png
    :alt: Move project to workspace folder
 
    Move project to workspace folder
@@ -61,7 +64,7 @@ and you'll be able to select files. Navigate to your App's
 ``.xcodeproj`` file and select that. Make sure "Copy items into
 destination group's folder (if needed)" is checked, and click add.
 
-.. figure:: images/installation/4.png
+.. figure:: source/images/installation/4.png
    :alt: Add project to Workspace in Xcode
 
    Add project to Workspace in Xcode
@@ -77,7 +80,7 @@ Workspace Folder.
 **Note: If you have already cloned a version of Turnpike, skip to the
 last step on maintenance to update it before continuing.**
 
-.. figure:: images/installation/5.png
+.. figure:: source/images/installation/5.png
    :alt: Add project to Workspace in Xcode
 
    Clone Turnpike
@@ -87,7 +90,7 @@ in Xcode, go to File->New->Add Files to "TestAppWorkspace" (where
 and this time select ``Turnpike.xcodeproj`` in the ``turnpike-ios``
 folder.
 
-.. figure:: images/installation/6.png
+.. figure:: source/images/installation/6.png
    :alt: Add Turnpike to Workspace
 
    Add Turnpike to Workspace
@@ -104,7 +107,7 @@ from it, as evidenced by expanding the Products group in the Turnpike
 project, and seeing that ``libTurnpike.a`` is red, meaning Xcode can't
 find it.
 
-.. figure:: images/installation/7.png
+.. figure:: source/images/installation/7.png
    :alt: Test Turnpike
 
    Test Turnpike
@@ -133,7 +136,7 @@ to bring up a box with little + and - buttons. Hit the + button and type
 ``../turnpike-ios/Turnpike`` (assuming your project is in the Workspace
 directory, as it should be if you followed along).
 
-.. figure:: images/installation/8.png
+.. figure:: source/images/installation/8.png
    :alt: Link to Turnpike Headers
 
    Link to Turnpike Headers
@@ -141,7 +144,7 @@ Next, in your project settings, select your "Target", and select the
 "Build Phases" tab. In your "Link Binary With Libraries" phase, hit the
 + button and select ``libTurnpike.a`` from the list (under Workspace).
 
-.. figure:: images/installation/9.png
+.. figure:: source/images/installation/9.png
    :alt: Link to static library
 
    Link to static library
@@ -172,7 +175,7 @@ you register one in the reverse domain name style and use that one for
 creating deep links. This will prevent any non-malicious collisions, and
 is what we recommend as best practice.**
 
-.. figure:: images/installation/10.png
+.. figure:: source/images/installation/10.png
    :alt: Create URL Schema
 
    Create URL Schema
@@ -208,7 +211,7 @@ To do this, we'll need our AppDelegate to implement
 if you're targeting iOS < 4.2).
 
 **Note:
-\`\ ``- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation``
+``- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation``
 will be called instead of
 ``- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url``
 on iOS >= 4.2 devices. If you want to support older devices, implement
@@ -217,7 +220,7 @@ both.**
 In your ``openURL`` method, all you need to add is
 ``[Turnpike resolveURL:url];`` and return ``YES``.
 
-.. figure:: images/installation/11.png
+.. figure:: source/images/installation/11.png
    :alt: Setting up your App Delegate
 
    Setting up your App Delegate
@@ -230,7 +233,7 @@ Lets do a quick test to make sure it works. Build and Run your app on
 the simulator or your device. Go to Safari and enter your URL Schema +
 ":hello" and hit "Go". For my app this is "``com.urx.TestApp:hello``\ ".
 
-.. figure:: images/installation/12.png
+.. figure:: source/images/installation/12.png
    :alt: Deeplinking from Mobile Safari
 
    Deeplinking from Mobile Safari
@@ -243,7 +246,7 @@ This should quickly switch to your app and in your Xcode console, you
 should see hello world. Congratulations, you've integrated URX Turnpike!
 Time for cookies!
 
-.. figure:: images/installation/13.png
+.. figure:: source/images/installation/13.png
    :alt: Hello World
 
    Hello World
@@ -254,7 +257,7 @@ Updating Turnpike is easy! Just open up your console, navigate to your
 Turnpike directory, then run ``git pull origin master`` and the newest
 version will update straight from GitHub.
 
-.. figure:: images/installation/14.png
+.. figure:: source/images/installation/14.png
    :alt: Updating From GitHub
 
    Updating from GitHub

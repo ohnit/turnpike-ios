@@ -1,4 +1,4 @@
-.. _enabling-mobile-deeplinking:
+
 
 ###########################
 Enabling Mobile Deeplinking
@@ -24,5 +24,3 @@ In the your's App Delegate, you must implement the optional App Delegate method 
     - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 
 In your implementation of this method, you should resolve the incoming url your router. If you're using Turnpike's shared router (which is all that's needed in most cases), simply call ``[Turnpike resolveURL:url]``. If you're using multiple routers, you can instead call ``[router resolveURL:url]``. 
-
-    

@@ -1,4 +1,4 @@
-.. _mapping-routes:
+
 
 ##############################
 Mapping Routes to Destinations
@@ -77,4 +77,3 @@ Suppose we want the links ``tab/travel`` and ``tab/food`` to open different UI t
         int tabIndexToSet = [[request.routeParameters valueForKey:@"tab_name"] isEqualToString:@"Home"] ? 0 : 1;
         [[UIApplication sharedApplication].delegate window].rootViewController.tabBarController.selectedIndex = tabIndexToSet;
     }];
- 
