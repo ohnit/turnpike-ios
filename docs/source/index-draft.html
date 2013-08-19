@@ -172,7 +172,8 @@
 <pre class="sourceCode objc"><code>if(request.matchedRoute) {
     [MyAwesomeLoggingService logRoute:request.matchedRoute WithParameters:request.routeParameters];
 }</code></pre>
-<p>The <code>routeParameters</code> is an <code>NSDictionary</code> of route parameters found in the matched route. If no route parameters are found this will be an empty <code>NSDictionary</code>, and if no matched route was found, this will be <code>nil</code>.####################### Filters &amp; Filter Chains #######################</p>
+<p>The <code>routeParameters</code> is an <code>NSDictionary</code> of route parameters found in the matched route. If no route parameters are found this will be an empty <code>NSDictionary</code>, and if no matched route was found, this will be <code>nil</code>.</p>
+<h1>Filters &amp; Filter Chains</h1>
 <p>Filters allow you to perform logic with the incoming Route Request before the route's mapped destination is resolved. Filters can be used for authentication, redirecting, analytics, and more. Turnpike's implementation of filters uses a simplified version of the <a href="http://www.oracle.com/technetwork/java/interceptingfilter-142169.html">intercepting filter</a> pattern.</p>
 <blockquote>
 <p><strong>note</strong></p>
