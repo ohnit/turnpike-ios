@@ -518,7 +518,9 @@ After route matching, the ``Router`` parses out route parameters (from variables
 	    [MyAwesomeLoggingService logRoute:request.matchedRoute WithParameters:request.routeParameters];
 	}
 
-The ``routeParameters`` is an ``NSDictionary`` of route parameters found in the matched route. If no route parameters are found this will be an empty ``NSDictionary``, and if no matched route was found, this will be ``nil``.#######################
+The ``routeParameters`` is an ``NSDictionary`` of route parameters found in the matched route. If no route parameters are found this will be an empty ``NSDictionary``, and if no matched route was found, this will be ``nil``.
+
+#######################
 Filters & Filter Chains
 #######################
 
